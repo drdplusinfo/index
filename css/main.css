@@ -1,0 +1,151 @@
+body {
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    background-image: url(/images/background.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-color: #FFEDD5;
+    color: #011126;
+}
+
+input[type=submit] {
+    font-size: inherit;
+}
+
+.vertical-centered-wrapper {
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    display: table;
+}
+
+.vertical-centered {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.horizontal-centered-wrapper {
+    text-align: center;
+}
+
+.horizontal-centered {
+    display: inline-block;
+    text-align: left;
+}
+
+.content {
+    padding: 1em;
+}
+
+.link {
+    display: block;
+    width: 15em;
+    height: 8em;
+    text-align: center;
+    float: left;
+    line-height: 8em;
+    color: whitesmoke;
+    margin: 0 1em 1em 0;
+}
+
+a.link:hover {
+    color: black;
+}
+
+.link::first-line {
+    vertical-align: middle;
+}
+
+.handbook {
+    background-size: cover;
+}
+
+.bestiar {
+    background-image: url(/images/bestiar-monochrome-small.png);
+}
+
+.bestiar:hover {
+    background-image: url(/images/bestiar-color-small.png);
+}
+
+.pph {
+    background-image: url(/images/pph-monochrome-small.png);
+}
+
+.pph:hover {
+    background-image: url(/images/pph-color-small.png);
+}
+
+.bojovnik {
+    background-image: url(/images/bojovnik-monochrome-small.png);
+}
+
+.bojovnik:hover {
+    background-image: url(/images/bojovnik-color-small.png);
+}
+
+.theurg {
+    background-image: url(/images/theurg-monochrome-small.png);
+}
+
+.theurg:hover {
+    background-image: url(/images/theurg-color-small.png);
+}
+
+.hranicar {
+    background-image: url(/images/hranicar-monochrome-small.png);
+}
+
+.hranicar:hover {
+    background-image: url(/images/hranicar-color-small.png);
+}
+
+.carodej {
+    background-image: url(/images/carodej-monochrome-small.png);
+}
+
+.carodej:hover {
+    background-image: url(/images/carodej-color-small.png);
+}
+
+.zlodej {
+    background-image: url(/images/zlodej-monochrome-small.png);
+}
+
+.zlodej:hover {
+    background-image: url(/images/zlodej-color-small.png);
+}
+
+.knez {
+    background-image: url(/images/knez-monochrome-small.png);
+}
+
+.knez:hover {
+    background-image: url(/images/knez-color-small.png);
+}
+
+.ppj {
+    background-image: url(/images/ppj-monochrome-small.png);
+}
+
+.ppj:hover {
+    background-image: url(/images/ppj-color-small.png);
+}
+
+.altar {
+    background-size: contain;
+    background-image: url(/images/altar-monochrome.png);
+    color: black;
+}
+
+.altar:hover {
+    background-image: url(/images/altar-color.png);
+}
+
+a.altar:hover {
+    color: white;
+}
+
+.block {
+    clear: left;
+}
