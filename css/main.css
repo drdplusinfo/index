@@ -48,6 +48,7 @@ input[type=submit] {
     color: black;
     margin: 0.5em;
     text-shadow: 0 0 3px whitesmoke, 0 0 1px white;
+    background-size: cover;
 }
 
 a.link:hover {
@@ -275,4 +276,12 @@ a.altar:hover {
 
 .taria-zahvozdi:hover {
     background: url(/images/taria-zahvozdi-color.png) no-repeat;
+}
+
+.taria {
+    background: url(/images/taria-monochrome.png) no-repeat;
+}
+
+.taria:hover {
+    background: url(/images/taria-color.png) no-repeat;
 }
