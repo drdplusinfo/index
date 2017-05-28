@@ -45,16 +45,21 @@ input[type=submit] {
     text-align: center;
     float: left;
     line-height: 8em; /* to center text */
-    color: whitesmoke;
+    color: black;
     margin: 0.5em;
 }
 
 a.link:hover {
-    color: black;
+    color: #ffd4a4;
 }
 
 .link::first-line {
     vertical-align: middle; /* for anchor */
+}
+
+.link.calculator {
+    height: 4em;
+    line-height: 4em; /* to center text */
 }
 
 .block {
@@ -216,4 +221,12 @@ a.link:hover {
 
 a.altar:hover {
     color: white;
+}
+
+.theurg.calculator {
+    background: url(/images/theurg-calculator-monochrome-small.png) no-repeat;
+}
+
+.theurg.calculator:hover {
+    background: url(/images/theurg-calculator-color-small.png) no-repeat;
 }
