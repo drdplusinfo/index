@@ -47,23 +47,37 @@ input[type=submit] {
     line-height: 8em; /* to center text */
     color: black;
     margin: 0.5em;
+    text-shadow: 0 0 3px whitesmoke, 0 0 1px white;
 }
 
 a.link:hover {
     color: #ffd4a4;
+    text-shadow: 0 0 3px black;
 }
 
 .link::first-line {
     vertical-align: middle; /* for anchor */
 }
 
-.link.calculator {
+.link.half {
     height: 4em;
     line-height: 4em; /* to center text */
 }
 
 .block {
     clear: left;
+}
+
+.panel {
+    float: left;
+}
+
+.panel div:first-child .link {
+    margin-bottom: 0;
+}
+
+.panel div:last-child .link {
+    margin-top: 0;
 }
 
 .handbook {
@@ -223,10 +237,42 @@ a.altar:hover {
     color: white;
 }
 
-.theurg.calculator {
+.theurg-calculator {
     background: url(/images/theurg-calculator-monochrome-small.png) no-repeat;
 }
 
-.theurg.calculator:hover {
+.theurg-calculator:hover {
     background: url(/images/theurg-calculator-color-small.png) no-repeat;
+}
+
+.rejstrik-pph {
+    background: url(/images/rejstrik-ppj-monochrome.png) no-repeat;
+}
+
+.rejstrik-pph:hover {
+    background: url(/images/rejstrik-ppj-color.png) no-repeat;
+}
+
+.tabulky-pph {
+    background: url(/images/tabulky-pph-monochrome.png) no-repeat;
+}
+
+.tabulky-pph:hover {
+    background: url(/images/tabulky-pph-color.png) no-repeat;
+}
+
+.severni-taria {
+    background: url(/images/severni-taria-monochrome.png) no-repeat;
+}
+
+.severni-taria:hover {
+    background: url(/images/severni-taria-color.png) no-repeat;
+}
+
+.taria-zahvozdi {
+    background: url(/images/taria-zahvozdi-monochrome.png) no-repeat;
+}
+
+.taria-zahvozdi:hover {
+    background: url(/images/taria-zahvozdi-color.png) no-repeat;
 }
