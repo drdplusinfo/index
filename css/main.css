@@ -62,7 +62,12 @@ a.link:hover {
 
 .link.half {
     height: 4em;
-    line-height: 4em; /* to center text */
+    line-height: 1em;
+}
+
+.link.half span {
+    position: relative;
+    top: 1.5em;
 }
 
 .block {
