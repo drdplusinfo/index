@@ -251,6 +251,14 @@ a.altar:hover {
     background: url(/images/theurg-calculator-color-small.png) no-repeat;
 }
 
+.fight-calculator {
+    background: url(/images/fight-calculator-monochrome.png) no-repeat;
+}
+
+.fight-calculator:hover {
+    background: url(/images/fight-calculator-color.png) no-repeat;
+}
+
 .rejstrik-pph {
     background: url(/images/rejstrik-ppj-monochrome.png) no-repeat;
 }
