@@ -8,6 +8,17 @@ body {
     color: #011126;
 }
 
+.background-image {
+    background-image: url(/images/unknown-heroes.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
 input[type=submit] {
     font-size: inherit;
 }
@@ -93,7 +104,8 @@ a.link:hover {
 }
 
 .lock {
-    width:32px;height:32px;
+    width: 32px;
+    height: 32px;
     vertical-align: bottom;
 }
 
