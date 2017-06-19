@@ -109,6 +109,13 @@ a.link:hover {
     vertical-align: bottom;
 }
 
+.percents {
+    font-style: italic;
+    color: orangered;
+    font-size: x-large;
+    opacity: .8;
+}
+
 .handbook {
     background-size: cover;
 }
