@@ -328,3 +328,11 @@ a.altar:hover {
 .taria:hover {
     background: url(/images/taria-color.png) no-repeat;
 }
+
+.rpgforum {
+    background: url(/images/rpgforum-monochrome.png) no-repeat;
+}
+
+.rpgforum:hover {
+    background: url(/images/rpgforum-color.png) no-repeat;
+}
