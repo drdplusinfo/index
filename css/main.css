@@ -336,3 +336,11 @@ a.altar:hover {
 .rpgforum:hover {
     background: url(/images/rpgforum-color.png) no-repeat;
 }
+
+.fall-calculator {
+    background: url(/images/falling-monochrome.png) no-repeat;
+}
+
+.fall-calculator:hover {
+    background: url(/images/falling-color.png) no-repeat;
+}
