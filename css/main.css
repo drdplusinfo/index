@@ -82,13 +82,17 @@ a.link:hover {
 }
 
 .links .link {
-    height: 1.3em;
+    height: 1.1em;
     line-height: 1em;
     margin: 0;
 }
 
-.deniky {
+.journals {
     background-image: url(/images/denik-monochrome.png);
+}
+
+.character-sheet {
+    font-style: italic;
 }
 
 .block {
