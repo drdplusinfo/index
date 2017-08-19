@@ -91,6 +91,36 @@ a.link:hover {
     background-image: url(/images/denik-monochrome.png);
 }
 
+.asterion {
+    background-image: url(/images/asterion-monochrome.png);
+}
+
+.asterion:hover {
+    background-image: url(/images/asterion-color.png);
+}
+
+.asterion-applications {
+    background-image: url(/images/asterion-stiny-jihu-monochrome.png);
+}
+
+.asterion-applications:hover {
+    background-image: url(/images/asterion-stiny-jihu-color.png);
+}
+
+.asterion-applications .link {
+    width: 100%;
+    height: 14px;
+    font-size: 16px;
+}
+
+.panel .asterion-applications .link:first-child {
+    margin-top: 3px;
+}
+
+.forum {
+    font-style: italic;
+}
+
 .character-sheet {
     font-style: italic;
 }
