@@ -81,6 +81,16 @@ a.link:hover {
     top: 1.5em;
 }
 
+.links .link {
+    height: 1.3em;
+    line-height: 1em;
+    margin: 0;
+}
+
+.deniky {
+    background-image: url(/images/denik-monochrome.png);
+}
+
 .block {
     clear: left;
 }
