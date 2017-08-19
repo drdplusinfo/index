@@ -140,26 +140,12 @@ a.link:hover {
     background-image: url(/images/pph-color-small.png);
 }
 
-.pph-hover {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: url(/images/pph-color-small.png) no-repeat;
-}
-
 .bojovnik {
     background-image: url(/images/bojovnik-monochrome-small.png);
 }
 
 .bojovnik:hover {
     background-image: url(/images/bojovnik-color-small.png);
-}
-
-.bojovnik-hover {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: url(/images/bojovnik-color-small.png) no-repeat;
 }
 
 .theurg {
@@ -170,13 +156,6 @@ a.link:hover {
     background-image: url(/images/theurg-color-small.png);
 }
 
-.theurg-hover {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: url(/images/theurg-color-small.png) no-repeat;
-}
-
 .hranicar {
     background-image: url(/images/hranicar-monochrome-small.png);
 }
@@ -185,11 +164,12 @@ a.link:hover {
     background-image: url(/images/hranicar-color-small.png);
 }
 
-.hranicar-hover {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: url(/images/hranicar-color-small.png);
+.pribeh {
+    background-image: url(/images/story-monochrome.png);
+}
+
+.pribeh:hover {
+    background-image: url(/images/story-color.png);
 }
 
 .carodej {
@@ -200,26 +180,12 @@ a.link:hover {
     background-image: url(/images/carodej-color-small.png);
 }
 
-.carodej-hover {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: url(/images/carodej-color-small.png) no-repeat;
-}
-
 .zlodej {
     background-image: url(/images/zlodej-monochrome-small.png);
 }
 
 .zlodej:hover {
     background-image: url(/images/zlodej-color-small.png);
-}
-
-.zlodej-hover {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: url(/images/zlodej-color-small.png) no-repeat;
 }
 
 .knez {
@@ -230,26 +196,12 @@ a.link:hover {
     background-image: url(/images/knez-color-small.png);
 }
 
-.knez-hover {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: url(/images/knez-color-small.png) no-repeat;
-}
-
 .ppj {
     background-image: url(/images/ppj-monochrome-small.png);
 }
 
 .ppj:hover {
     background-image: url(/images/ppj-color-small.png);
-}
-
-.ppj-hover {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: url(/images/ppj-color-small.png) no-repeat;
 }
 
 .altar {
@@ -260,13 +212,6 @@ a.link:hover {
 
 .altar:hover {
     background-image: url(/images/altar-color.png);
-}
-
-.altar-hover {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: url(/images/altar-color.png) no-repeat;
 }
 
 a.altar:hover {
