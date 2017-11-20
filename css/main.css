@@ -156,11 +156,19 @@ a.link:hover {
 }
 
 .pribeh {
-    background-image: url(/images/story-monochrome.png);
+    background-image: url(/images/pribeh-monochrome.png);
 }
 
 .pribeh:hover {
-    background-image: url(/images/story-color.png);
+    background-image: url(/images/pribeh-color.png);
+}
+
+.blog {
+    background-image: url(/images/blog-monochrome.png);
+}
+
+.blog:hover {
+    background-image: url(/images/blog-color.png);
 }
 
 .carodej {
