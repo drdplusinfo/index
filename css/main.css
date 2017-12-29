@@ -25,13 +25,10 @@ input[type=submit] {
 
 .link {
     display: block;
-    width: 15em;
-    max-width: 78vw;
     height: 8em;
     text-align: center;
-    line-height: 8em; /* to center text */
+    line-height: 8em;
     color: black;
-    margin: 0.5em;
     text-shadow: 0 0 3px whitesmoke, 0 0 1px white;
     background-size: cover;
 }
@@ -120,7 +117,7 @@ a.link:hover {
 }
 
 .bestiar-hover {
-    background: url(/images/bestiar-color-small.png) no-repeat -9999px 9999px;
+    background-image: url(/images/bestiar-color-small.png);
 }
 
 .pph {
@@ -204,7 +201,6 @@ a.link:hover {
 }
 
 .altar {
-    background-size: contain;
     background-image: url(/images/altar-monochrome.png);
     color: black;
 }
@@ -231,73 +227,73 @@ a.draci-hlidka:hover {
 }
 
 .theurg-calculator {
-    background: url(/images/theurg-calculator-monochrome-small.png) no-repeat;
+    background-image: url(/images/theurg-calculator-monochrome-small.png);
 }
 
 .theurg-calculator:hover {
-    background: url(/images/theurg-calculator-color-small.png) no-repeat;
+    background-image: url(/images/theurg-calculator-color-small.png);
 }
 
 .fight-calculator {
-    background: url(/images/fight-calculator-monochrome.png) no-repeat;
+    background-image: url(/images/fight-calculator-monochrome.png);
 }
 
 .fight-calculator:hover {
-    background: url(/images/fight-calculator-color.png) no-repeat;
+    background-image: url(/images/fight-calculator-color.png);
 }
 
 .rejstrik-pph {
-    background: url(/images/rejstrik-ppj-monochrome.png) no-repeat;
+    background-image: url(/images/rejstrik-ppj-monochrome.png);
 }
 
 .rejstrik-pph:hover {
-    background: url(/images/rejstrik-ppj-color.png) no-repeat;
+    background-image: url(/images/rejstrik-ppj-color.png);
 }
 
 .tabulky-pph {
-    background: url(/images/tabulky-pph-monochrome.png) no-repeat;
+    background-image: url(/images/tabulky-pph-monochrome.png);
 }
 
 .tabulky-pph:hover {
-    background: url(/images/tabulky-pph-color.png) no-repeat;
+    background-image: url(/images/tabulky-pph-color.png);
 }
 
 .severni-taria {
-    background: url(/images/severni-taria-monochrome.png) no-repeat;
+    background-image: url(/images/severni-taria-monochrome.png);
 }
 
 .severni-taria:hover {
-    background: url(/images/severni-taria-color.png) no-repeat;
+    background-image: url(/images/severni-taria-color.png);
 }
 
 .taria-zahvozdi {
-    background: url(/images/taria-zahvozdi-monochrome.png) no-repeat;
+    background-image: url(/images/taria-zahvozdi-monochrome.png);
 }
 
 .taria-zahvozdi:hover {
-    background: url(/images/taria-zahvozdi-color.png) no-repeat;
+    background-image: url(/images/taria-zahvozdi-color.png);
 }
 
 .taria {
-    background: url(/images/taria-monochrome.png) no-repeat;
+    background-image: url(/images/taria-monochrome.png);
 }
 
 .taria:hover {
-    background: url(/images/taria-color.png) no-repeat;
+    background-image: url(/images/taria-color.png);
 }
 
 .rpgforum {
-    background: url(/images/rpgforum-monochrome.png) no-repeat;
+    background-image: url(/images/rpgforum-monochrome.png);
 }
 
 .rpgforum:hover {
-    background: url(/images/rpgforum-color.png) no-repeat;
+    background-image: url(/images/rpgforum-color.png);
 }
 
 .fall-calculator {
-    background: url(/images/falling-monochrome.png) no-repeat;
+    background-image: url(/images/falling-monochrome.png);
 }
 
 .fall-calculator:hover {
-    background: url(/images/falling-color.png) no-repeat;
+    background-image: url(/images/falling-color.png);
 }
