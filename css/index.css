@@ -23,6 +23,10 @@ input[type=submit] {
     font-size: inherit;
 }
 
+hr {
+    margin: 0.2em 0;
+}
+
 .link {
     display: block;
     height: 8em;
@@ -48,42 +52,8 @@ a.link:hover {
     margin: auto;
 }
 
-.journals {
-    background-image: url(/images/denik-monochrome.png);
-}
-
-.journals:hover {
-    background-image: url(/images/denik-color.png);
-}
-
-.asterion {
-    background-image: url(/images/asterion-monochrome.png);
-}
-
-.asterion:hover {
-    background-image: url(/images/asterion-color.png);
-}
-
-.asterion-applications {
-    background-image: url(/images/asterion-stiny-jihu-monochrome.png);
-}
-
-.asterion-applications:hover {
-    background-image: url(/images/asterion-stiny-jihu-color.png);
-}
-
-.asterion-applications .link {
-    width: 100%;
-    height: 14px;
-    font-size: 16px;
-}
-
-.forum {
-    font-style: italic;
-}
-
-.character-sheet {
-    font-style: italic;
+.col-sm-3 {
+    padding: 4px;
 }
 
 .name {
@@ -106,6 +76,54 @@ a.link:hover {
 
 .handbook {
     background-size: cover;
+}
+
+.journals {
+    background-image: url(/images/osobni-denik-monochrome.png);
+}
+
+.journals:hover {
+    background-image: url(/images/osobni-denik-color.png);
+}
+
+.asterion-page {
+    background-image: url(/images/asterion-page-monochrome.png);
+}
+
+.asterion-page:hover {
+    background-image: url(/images/asterion-page-color.png);
+}
+
+.asterion {
+    background-image: url(/images/asterion-monochrome.png);
+}
+
+.asterion:hover {
+    background-image: url(/images/asterion-color.png);
+}
+
+.asterion-forum {
+    background-image: url(/images/asterion-forum-monochrome.jpg);
+}
+
+.asterion-forum:hover {
+    background-image: url(/images/asterion-forum-color.jpg);
+}
+
+.asterion-applications {
+    background-image: url(/images/asterion-stiny-jihu-monochrome.png);
+}
+
+.asterion-applications:hover {
+    background-image: url(/images/asterion-stiny-jihu-color.png);
+}
+
+.forum {
+    font-style: italic;
+}
+
+.character-sheet {
+    font-style: italic;
 }
 
 .bestiar {
