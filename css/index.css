@@ -231,6 +231,15 @@ a.altar:hover {
     color: white;
 }
 
+.draci-doupe-cz {
+    background-image: url(/images/draci-doupe-cz-monochrome.png);
+    color: black;
+}
+
+.draci-doupe-cz:hover {
+    background-image: url(/images/draci-doupe-cz-color.png);
+}
+
 .drd-2 {
     background-image: url(/images/drd2-monochrome.png);
     color: black;
