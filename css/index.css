@@ -231,6 +231,15 @@ a.altar:hover {
     color: white;
 }
 
+.drd-2 {
+    background-image: url(/images/drd2-monochrome.png);
+    color: black;
+}
+
+.drd-2:hover {
+    background-image: url(/images/drd2-color.png);
+}
+
 .draci-hlidka {
     background-image: url(/images/draci-hlidka-monochrome.png);
     color: black;
@@ -238,10 +247,6 @@ a.altar:hover {
 
 .draci-hlidka:hover {
     background-image: url(/images/draci-hlidka-color.png);
-}
-
-a.draci-hlidka:hover {
-    color: white;
 }
 
 .theurg-calculator {
