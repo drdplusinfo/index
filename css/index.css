@@ -134,8 +134,12 @@ a.link:hover {
     background-image: url(/images/bestiar-color-small.png);
 }
 
-.bestiar-hover {
-    background-image: url(/images/bestiar-color-small.png);
+.pribeh-bestiar {
+    background-image: url(/images/pribeh-bestiare-monochrome.png);
+}
+
+.pribeh-bestiar:hover {
+    background-image: url(/images/pribeh-bestiare-color.png);
 }
 
 .pph {
