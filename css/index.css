@@ -263,6 +263,24 @@ a.altar:hover {
     background-image: url(/images/dorn-color.png);
 }
 
+.rise-snu {
+    background-image: url(/images/rise-snu-monochrome.png);
+    color: black;
+}
+
+.rise-snu:hover {
+    background-image: url(/images/rise-snu-color.png);
+}
+
+.legie {
+    background-image: url(/images/legie-monochrome.png);
+    color: black;
+}
+
+.legie:hover {
+    background-image: url(/images/legie-color.png);
+}
+
 .drd-2 {
     background-image: url(/images/drd2-monochrome.png);
     color: black;
