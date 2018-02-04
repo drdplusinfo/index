@@ -104,11 +104,11 @@ a.link:hover {
 }
 
 .asterion-forum {
-    background-image: url(/images/asterion-forum-monochrome.jpg);
+    background-image: url(/images/asterion-forum-monochrome.png);
 }
 
 .asterion-forum:hover {
-    background-image: url(/images/asterion-forum-color.jpg);
+    background-image: url(/images/asterion-forum-color.png);
 }
 
 .asterion-applications {
@@ -245,6 +245,24 @@ a.altar:hover {
     background-image: url(/images/draci-doupe-cz-color.png);
 }
 
+.gamecon {
+    background-image: url(/images/gamecon-monochrome.png);
+    color: black;
+}
+
+.gamecon:hover {
+    background-image: url(/images/gamecon-color.png);
+}
+
+.dorn {
+    background-image: url(/images/dorn-monochrome.png);
+    color: black;
+}
+
+.dorn:hover {
+    background-image: url(/images/dorn-color.png);
+}
+
 .drd-2 {
     background-image: url(/images/drd2-monochrome.png);
     color: black;
@@ -333,4 +351,12 @@ a.altar:hover {
 
 .fall-calculator:hover {
     background-image: url(/images/falling-color.png);
+}
+
+.proroctvi {
+    background-image: url(/images/proroctvi-monochrome.png);
+}
+
+.proroctvi:hover {
+    background-image: url(/images/proroctvi-color.png);
 }
