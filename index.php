@@ -1,3 +1,4 @@
+<?php include_once __DIR__ . '/get_hash.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="css/bootstrap-4.0.0/bootstrap-reboot.min.css">
     <link type="text/css" rel="stylesheet" href="css/bootstrap-4.0.0/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/bootstrap-4.0.0/bootstrap-grid.min.css">
-    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="css/index.css?v=<?= get_file_hash(__DIR__ . '/css/index.css'); ?>">
 </head>
 <body>
 <div class="background-image"></div>
@@ -38,7 +39,7 @@
     <div class="row">
         <div class="col-md no-gutters">
             <a class="hranicar handbook" href="https://hranicar.drdplus.info"><span
-                    class="name">Hraničář</span></a>
+                        class="name">Hraničář</span></a>
         </div>
         <div class="col-md no-gutters">
             <a class="theurg handbook" href="https://theurg.drdplus.info"><span class="name">Theurg</span></a>
@@ -65,7 +66,7 @@
             </a>
         </div>
         <div class="col-md no-gutters">
-            <a class="blog" href="https://blog.drdplus.info/#!index.md">
+            <a class="blog" href="https://blog.drdplus.info/index.php#!index.md">
                 <span class="name">Blog z vývoje DrD+ 2</span>
             </a>
         </div>
@@ -77,7 +78,7 @@
         </div>
         <div class="col-md no-gutters">
             <a class="fight-calculator" href="https://boj.drdplus.info"><span
-                    class="name">Do boje! - kalkulátor zbraní</span></a>
+                        class="name">Do boje! - kalkulátor zbraní</span></a>
         </div>
         <div class="col-md no-gutters">
             <a class="fall-calculator" href="https://pad.drdplus.info"><span class="name">Padáš! - kalkulátor zranění při pádu</span></a>
