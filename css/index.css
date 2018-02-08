@@ -31,6 +31,12 @@ hr {
 .link {
     display: block;
     height: 8em;
+    background-size: cover;
+}
+
+a {
+    display: block;
+    height: 8em;
     text-align: center;
     line-height: 8em;
     color: black;
@@ -38,12 +44,12 @@ hr {
     background-size: cover;
 }
 
-a.link:hover {
+a:hover {
     color: #ffd4a4;
     text-shadow: 0 0 3px black;
 }
 
-.link::first-line {
+a::first-line {
     vertical-align: middle; /* for anchor */
 }
 
@@ -297,6 +303,15 @@ a.altar:hover {
 
 .draci-hlidka:hover {
     background-image: url(/images/draci-hlidka-color.png);
+}
+
+.drakkar {
+    background-image: url(/images/drakkar-monochrome.png);
+    color: black;
+}
+
+.drakkar:hover {
+    background-image: url(/images/drakkar-color.png);
 }
 
 .theurg-calculator {
