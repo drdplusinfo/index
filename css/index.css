@@ -305,6 +305,15 @@ a.altar:hover {
     background-image: url(/images/draci-hlidka-color.png);
 }
 
+.jeskyne-a-draci {
+    background-image: url(/images/jeskyne-a-draci-monochrome.png);
+    color: black;
+}
+
+.jeskyne-a-draci:hover {
+    background-image: url(/images/jeskyne-a-draci-color.png);
+}
+
 .drakkar {
     background-image: url(/images/drakkar-monochrome.png);
     color: black;

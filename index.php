@@ -113,9 +113,6 @@
         <div class="col-md no-gutters">
             <a class="altar" href="http://altar.cz"><span class="name">Altar</span></a>
         </div>
-        <div class="col-md no-gutters">
-            <a href="http://www.drd2.cz/" class="link drd-2">Dračí doupě II</a>
-        </div>
     </div>
     <hr>
     <div class="row">
@@ -167,11 +164,19 @@
         <div class="col-md no-gutters">
             <a class="drakkar" href="http://drakkar.sk/">Drakkar</a>
         </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md no-gutters">
+            <a href="http://www.drd2.cz/" class="link drd-2">Dračí doupě II</a>
+        </div>
         <div class="col-md no-gutters">
             <a class="draci-hlidka" href="http://dracihlidka.cz/">Dračí hlídka</a>
         </div>
+        <div class="col-md no-gutters">
+            <a class="jeskyne-a-draci" href="http://jeskyneadraci.cz/">Jeskyně a draci</a>
+        </div>
     </div>
-    <hr>
     <div class="row">
         <div class="col-md no-gutters">
             <a class="proroctvi" href="https://proroctvi.altar.cz/">Proroctví</a>
