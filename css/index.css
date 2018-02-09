@@ -75,7 +75,7 @@ a::first-line {
     color: #004a00;
 }
 
-.last-change:hover {
+a:hover .last-change {
     font-weight: normal;
     color: whitesmoke;
 }
