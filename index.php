@@ -66,7 +66,7 @@
             </a>
         </div>
         <div class="col-md no-gutters">
-            <a class="blog" href="https://blog.drdplus.info/index.php#!index.md">
+            <a class="blog" href="https://blog.drdplus.info/">
                 <span class="name">Blog z vývoje DrD+ 2 <br>
                     <span class="last-change">(9.2. 2018)</span>
                 </span>
