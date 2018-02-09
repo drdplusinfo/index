@@ -93,21 +93,21 @@
     <div class="row">
         <div class="col-md no-gutters">
             <div class="links link journals">
-                <a class="link" href="http://www.altar.cz/drdplus/denik_boj.pdf">Deník pro bojovníka</a>
-                <a class="link" href="http://www.altar.cz/drdplus/denik_car.pdf">Deník pro čaroděje</a>
-                <a class="link" href="http://www.altar.cz/drdplus/denik_hra.pdf">Deník pro hraničáře</a>
-                <a class="link" href="http://www.altar.cz/drdplus/denik_kne.pdf">Deník pro kněze</a>
-                <a class="link" href="http://www.altar.cz/drdplus/denik_the.pdf">Deník pro theurga</a>
-                <a class="link" href="http://www.altar.cz/drdplus/denik_zlo.pdf">Deník pro zloděje</a>
+                <a class="link" href="./pdf/deniky/denik_bojovnik.pdf">Deník pro bojovníka</a>
+                <a class="link" href="./pdf/deniky/denik_carodej.pdf">Deník pro čaroděje</a>
+                <a class="link" href="./pdf/deniky/denik_hranicar.pdf">Deník pro hraničáře</a>
+                <a class="link" href="./pdf/deniky/denik_knez.pdf">Deník pro kněze</a>
+                <a class="link" href="./pdf/deniky/denik_theurg.pdf">Deník pro theurga</a>
+                <a class="link" href="./pdf/deniky/denik_zlodej.pdf">Deník pro zloděje</a>
             </div>
         </div>
         <div class="col-md no-gutters">
             <div class="taria links link">
                 <a class="link" href="http://taria.unas.cz/index2.php"><span class="name">Taria</span></a>
-                <a href="/pdf/severni_taria_drd_plus.pdf" class="link">
+                <a href="./pdf/severni_taria_drd_plus.pdf" class="link">
                     <span class="name">Severní Taria, úpravy pro DrD+</span>
                 </a>
-                <a class="link" href="/pdf/taria_zahvozdi_drd_plus.pdf">
+                <a class="link" href="./pdf/taria_zahvozdi_drd_plus.pdf">
                     <span class="name">Taria Záhvozdní, úpravy pro DrD+</span>
                 </a>
             </div>
