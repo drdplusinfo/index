@@ -69,6 +69,12 @@ a::first-line {
     line-height: normal;
 }
 
+.last-change {
+    font-style: italic;
+    font-weight: bold;
+    color: #004a00;
+}
+
 .lock {
     width: 32px;
     height: 32px;
