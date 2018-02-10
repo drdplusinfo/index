@@ -1,4 +1,13 @@
-<?php include_once __DIR__ . '/get_hash.php'; ?>
+<?php
+ini_set('error_reporting', -1);
+if (($_SERVER['REMOTE_ADDR'] ?? '') === '127.0.0.1') {
+    ini_set('display_errors', '1');
+} else {
+    ini_set('display_errors', '0');
+}
+include_once __DIR__ . '/vendor/autoload.php';
+include_once __DIR__ . '/get_hash.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +21,12 @@
     <link type="text/css" rel="stylesheet" href="css/index.css?v=<?= get_file_hash(__DIR__ . '/css/index.css'); ?>">
 </head>
 <body>
+<div class="prefetch-images">
+    <?php $colorImages = new \DrdPlus\Index\ColorImages(__DIR__ . '/images');
+    foreach ($colorImages as $colorImage) {
+        ?><img src="./images/<?= $colorImage ?>"><?php
+    } ?>
+</div>
 <div class="background-image"></div>
 <div class="container">
     <div class="row">
@@ -86,7 +101,8 @@
             <a class="fall-calculator" href="https://pad.drdplus.info"><span class="name">Padáš! - kalkulátor zranění při pádu</span></a>
         </div>
         <div class="col-md no-gutters">
-            <a class="rpgforum small-image" href="https://rpgforum.cz/forum/viewforum.php?f=238"><span class="name forum">RPG fórum - DrD+</span></a>
+            <a class="rpgforum small-image" href="https://rpgforum.cz/forum/viewforum.php?f=238"><span
+                        class="name forum">RPG fórum - DrD+</span></a>
         </div>
     </div>
     <hr>

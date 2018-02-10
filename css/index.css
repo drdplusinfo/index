@@ -46,6 +46,12 @@ a {
     background-repeat: no-repeat;
 }
 
+.prefetch-images {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+
 a:hover {
     color: #ffd4a4;
     text-shadow: 0 0 3px black;
