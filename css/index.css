@@ -36,6 +36,8 @@ hr {
 }
 
 a {
+    text-decoration: none;
+    border-bottom: none;
     display: block;
     height: 8em;
     text-align: center;
@@ -53,6 +55,11 @@ a {
 }
 
 a:hover {
+    color: #ffd4a4;
+    text-shadow: 0 0 3px black;
+}
+
+a.external-url:hover {
     color: #ffd4a4;
     text-shadow: 0 0 3px black;
 }
