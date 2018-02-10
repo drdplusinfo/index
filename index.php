@@ -86,7 +86,7 @@
             <a class="fall-calculator" href="https://pad.drdplus.info"><span class="name">Padáš! - kalkulátor zranění při pádu</span></a>
         </div>
         <div class="col-md no-gutters">
-            <a class="rpgforum" href="https://rpgforum.cz/forum/viewforum.php?f=238"><span class="name forum">RPG fórum - DrD+</span></a>
+            <a class="rpgforum small-image" href="https://rpgforum.cz/forum/viewforum.php?f=238"><span class="name forum">RPG fórum - DrD+</span></a>
         </div>
     </div>
     <hr>
@@ -113,7 +113,7 @@
             </div>
         </div>
         <div class="col-md no-gutters">
-            <a class="altar" href="http://altar.cz"><span class="name">Altar</span></a>
+            <a class="altar small-image" href="http://altar.cz"><span class="name">Altar</span></a>
         </div>
     </div>
     <hr>
@@ -157,14 +157,16 @@
     <hr>
     <div class="row">
         <div class="col-md no-gutters">
-            <a class="link draci-doupe-cz" href="http://www.dracidoupe.cz/">Server o Dračím doupěti</a>
+            <a class="draci-doupe-cz small-image" href="http://www.dracidoupe.cz/">Server o Dračím doupěti</a>
         </div>
         <div class="col-md no-gutters">
-            <a class="gamecon" href="http://gamecon.cz/">Gamecon</a>
+            <a class="gamecon small-image" href="http://gamecon.cz/">Gamecon</a>
         </div>
-
         <div class="col-md no-gutters">
-            <a class="drakkar" href="http://drakkar.sk/">Drakkar</a>
+            <a class="drakkar small-image" href="http://drakkar.sk/">Drakkar</a>
+        </div>
+        <div class="col-md no-gutters">
+            <a class="d20 small-image" href="http://www.d20.cz/">D20</a>
         </div>
     </div>
     <hr>

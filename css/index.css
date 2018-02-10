@@ -32,6 +32,7 @@ hr {
     display: block;
     height: 8em;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 a {
@@ -42,6 +43,7 @@ a {
     color: black;
     text-shadow: 0 0 3px whitesmoke, 0 0 1px white;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 a:hover {
@@ -332,6 +334,20 @@ a.altar:hover {
 
 .drakkar:hover {
     background-image: url(/images/drakkar-color.png);
+}
+
+.small-image {
+    background-position: center;
+    background-size: contain;
+}
+
+.d20 {
+    background-image: url(/images/d20-monochrome.png);
+    color: black;
+}
+
+.d20:hover {
+    background-image: url(/images/d20-color.png);
 }
 
 .theurg-calculator {
