@@ -268,6 +268,15 @@ a.altar:hover {
     color: white;
 }
 
+.neviditelna-kniha {
+    background-image: url(/images/neviditelna-kniha-monochrome.png);
+    color: black;
+}
+
+.neviditelna-kniha:hover {
+    background-image: url(/images/neviditelna-kniha-color.png);
+}
+
 .draci-doupe-cz {
     background-image: url(/images/draci-doupe-cz-monochrome.png);
     color: black;
