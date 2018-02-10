@@ -206,11 +206,5 @@ include_once __DIR__ . '/get_hash.php';
         </div>
     </div>
 </div>
-<div class="prefetch-images">
-    <?php $colorImages = new \DrdPlus\Index\ColorImages(__DIR__ . '/images');
-    foreach ($colorImages as $colorImage) {
-        ?><img src="./images/<?= $colorImage ?>"><?php
-    } ?>
-</div>
 </body>
 </html>
