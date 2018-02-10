@@ -21,12 +21,6 @@ include_once __DIR__ . '/get_hash.php';
     <link type="text/css" rel="stylesheet" href="css/index.css?v=<?= get_file_hash(__DIR__ . '/css/index.css'); ?>">
 </head>
 <body>
-<div class="prefetch-images">
-    <?php $colorImages = new \DrdPlus\Index\ColorImages(__DIR__ . '/images');
-    foreach ($colorImages as $colorImage) {
-        ?><img src="./images/<?= $colorImage ?>"><?php
-    } ?>
-</div>
 <div class="background-image"></div>
 <div class="container">
     <div class="row">
@@ -211,6 +205,12 @@ include_once __DIR__ . '/get_hash.php';
             <a class="legie" href="https://legie.altar.cz/">Legie</a>
         </div>
     </div>
+</div>
+<div class="prefetch-images">
+    <?php $colorImages = new \DrdPlus\Index\ColorImages(__DIR__ . '/images');
+    foreach ($colorImages as $colorImage) {
+        ?><img src="./images/<?= $colorImage ?>"><?php
+    } ?>
 </div>
 </body>
 </html>
