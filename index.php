@@ -1,5 +1,4 @@
 <?php
 $visitorCanAccessContent = true; // free for all
-$contactsPermanent = true;
-$contactsTop = true;
+$contactsFixed = true;
 include __DIR__ . '/vendor/drd-plus/rules-html-skeleton/index.php';
