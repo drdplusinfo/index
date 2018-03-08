@@ -40,11 +40,12 @@
       "rm -fr ./js/generic && ln -s ../vendor/drd-plus/rules-html-skeleton/js/generic ./js/generic"
     ],
     "post-update-cmd": [
-      "./vendor/drd-plus/rules-html-skeleton/bin/assets --dir=css"
+      "./vendor/drd-plus/rules-html-skeleton/bin/assets --dir=css",
+      "find ./cache -mindepth 2 -type f -exec rm {} +"
     ],
     "post-install-cmd": [
       "./vendor/drd-plus/rules-html-skeleton/bin/assets --dir=css",
-      "rm -f cache/pages/*",
+      "find ./cache -mindepth 2 -type f -exec rm {} +",
       "wget https://www.drdplus.info --background --output-document=- --output-file=- >> /dev/null"
     ]
   }
