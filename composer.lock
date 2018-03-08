@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-rules-html-skeleton.git",
-                "reference": "c77b35b9b45b0e171516598290121ac2749b58a0"
+                "reference": "1456c5a0b851faac4edbf77d93ed0e6cf4214cac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/c77b35b9b45b0e171516598290121ac2749b58a0",
-                "reference": "c77b35b9b45b0e171516598290121ac2749b58a0",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/1456c5a0b851faac4edbf77d93ed0e6cf4214cac",
+                "reference": "1456c5a0b851faac4edbf77d93ed0e6cf4214cac",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2018-03-08 07:53:11"
+            "time": "2018-03-08 09:30:02"
         },
         {
             "name": "granam/exceptions-hierarchy",
