@@ -1,22 +1,10 @@
 body {
     font-size: 20px;
     font-family: "Times New Roman", Times, serif;
-    background-image: url(/images/background.png?version=40fd24846865c459e4f38300e2ae9377);
-    background-repeat: repeat-y;
-    background-size: 100%;
-    background-color: #FFEDD5;
-    color: #011126;
 }
 
 .background-image {
-    background-image: url(/images/unknown-heroes.png?version=a8099756c736b40a4d234deab28d0304);
-    background-repeat: no-repeat;
-    background-position-x: center;
     background-size: contain;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
 }
 
 input[type=submit] {
