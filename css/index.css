@@ -378,6 +378,14 @@ a.altar:hover {
     background-image: url(/images/immortal-fighters-color.png);
 }
 
+.andor {
+    background-image: url(/images/andor-monochrome.png);
+}
+
+.andor:hover {
+    background-image: url(/images/andor-color.png);
+}
+
 .theurg-calculator {
     background-image: url(/images/theurg-calculator-monochrome-small.png?version=fa0b717725d9b18298370b2fbd785589);
 }
