@@ -43,13 +43,23 @@ a {
 }
 
 a:hover {
+    color: transparent;
+    text-shadow: none;
+}
+
+.links a:hover {
     color: #ffd4a4;
     text-shadow: 0 0 3px black;
 }
 
+a.external-url {
+    text-decoration: none;
+    border: none;
+}
+
 a.external-url:hover {
-    color: #ffd4a4;
-    text-shadow: 0 0 3px black;
+    color: transparent;
+    text-shadow: none;
 }
 
 a::first-line {
@@ -358,6 +368,14 @@ a.altar:hover {
 
 .d20:hover {
     background-image: url(/images/d20-color.png?version=748cad78bdb54c5d6b29c568d90577dc);
+}
+
+.immortal-fighters {
+    background-image: url(/images/immortal-fighters-monochrome.png);
+}
+
+.immortal-fighters:hover {
+    background-image: url(/images/immortal-fighters-color.png);
 }
 
 .theurg-calculator {
