@@ -33,14 +33,12 @@ a {
     color: black;
     text-shadow: 0 0 3px whitesmoke, 0 0 1px white;
     background-size: cover;
-    background-position-y: top;
     background-repeat: no-repeat;
 }
 
 a:hover {
-    color: transparent;
-    text-shadow: none;
-    background-position-y: bottom;
+    color: #ffd4a4;
+    text-shadow: 0 0 3px black;
 }
 
 .links a:hover {
@@ -54,8 +52,8 @@ a.external-url {
 }
 
 a.external-url:hover {
-    color: transparent;
-    text-shadow: none;
+    color: #ffd4a4;
+    text-shadow: 0 0 3px black;
 }
 
 a::first-line {
@@ -105,6 +103,46 @@ a:hover .last-change {
     background-size: cover;
 }
 
+.journals {
+    background-image: url(/images/osobni-denik-monochrome.png?version=393021816730729dcccfbb6d510f2342);
+}
+
+.journals:hover {
+    background-image: url(/images/osobni-denik-color.png?version=153b8b57402a0795958ccad888a6bef2);
+}
+
+.asterion-page {
+    background-image: url(/images/asterion-page-monochrome.png?version=dbd42990b9fd1f72715b07fd2ba4e36c);
+}
+
+.asterion-page:hover {
+    background-image: url(/images/asterion-page-color.png?version=29ca0077347ab68b0176acea52093edc);
+}
+
+.asterion {
+    background-image: url(/images/asterion-monochrome.png?version=4d19cb287375f69c1bc39f6f8d7a9423);
+}
+
+.asterion:hover {
+    background-image: url(/images/asterion-color.png?version=588c1b8e23bf26cb45198051e018b70c);
+}
+
+.asterion-forum {
+    background-image: url(/images/asterion-forum-monochrome.png?version=6f173b55ef895766003f3e9ab7283a6f);
+}
+
+.asterion-forum:hover {
+    background-image: url(/images/asterion-forum-color.png?version=44944499a37049345568dcaa76a55bce);
+}
+
+.asterion-applications {
+    background-image: url(/images/asterion-stiny-jihu-monochrome.png?version=ea349052a59b7d957ed7f099ad4f7e6d);
+}
+
+.asterion-applications:hover {
+    background-image: url(/images/asterion-stiny-jihu-color.png?version=08784f9c0372aba533959981a6e983e4);
+}
+
 .forum {
     font-style: italic;
 }
@@ -113,11 +151,311 @@ a:hover .last-change {
     font-style: italic;
 }
 
+.bestiar {
+    background-image: url(/images/bestiar-monochrome-small.png?version=3717533339df2cf0f27010e86eef1a45);
+}
+
+.bestiar:hover {
+    background-image: url(/images/bestiar-color-small.png?version=6dd934db9af0fec1ae72b5f6474140ff);
+}
+
+.pribeh-bestiar {
+    background-image: url(/images/pribeh-bestiare-monochrome.png?version=03dd33e19e5cff32b8c83c7fb98bc774);
+}
+
+.pribeh-bestiar:hover {
+    background-image: url(/images/pribeh-bestiare-color.png?version=12d84c03d47a26778720062daad655cd);
+}
+
+.pph {
+    background-image: url(/images/pph-monochrome-small.png?version=a2ab29d61c74956659825d0887a8e378);
+}
+
+.pph:hover {
+    background-image: url(/images/pph-color-small.png?version=0023522c6d5841901bbc7fb194131da6);
+}
+
+.bojovnik {
+    background-image: url(/images/bojovnik-monochrome-small.png?version=e3edf919ed1a3954bb5e8390f09ee2ed);
+}
+
+.bojovnik:hover {
+    background-image: url(/images/bojovnik-color-small.png?version=1d81bd57cf917138a5d920026528250c);
+}
+
+.theurg {
+    background-image: url(/images/theurg-monochrome-small.png?version=903bf5e9a3a8dc842d0b59af7ae2e27f);
+}
+
+.theurg:hover {
+    background-image: url(/images/theurg-color-small.png?version=3c9a752c18a5e252eafd294c29613f2f);
+}
+
+.hranicar {
+    background-image: url(/images/hranicar-monochrome-small.png?version=900d6ba625bf725a3662f24a544b1d34);
+}
+
+.hranicar:hover {
+    background-image: url(/images/hranicar-color-small.png?version=09e4f82a5749d2a6567e3a2399c4f025);
+}
+
+.pribeh {
+    background-image: url(/images/pribeh-monochrome.png?version=a87c36a1d6965ceb9cbea6920be41607);
+}
+
+.pribeh:hover {
+    background-image: url(/images/pribeh-color.png?version=e6bc6c957032f129ddc9116c8caf5eb5);
+}
+
+.blog {
+    background-image: url(/images/blog-monochrome.png?version=f7c87ee254de08f796aac3b7c8e8e805);
+}
+
+.blog:hover {
+    background-image: url(/images/blog-color.png?version=6fd02d18a71763194dffce0af3559e72);
+}
+
+.carodej {
+    background-image: url(/images/carodej-monochrome-small.png?version=aa0ed6f8cc5b540fc26defdad033b739);
+}
+
+.carodej:hover {
+    background-image: url(/images/carodej-color-small.png?version=df1090621f0f994926f8023f15593aea);
+}
+
+.zlodej {
+    background-image: url(/images/zlodej-monochrome-small.png?version=dcac922ec442d9695bac60ff5206326c);
+}
+
+.zlodej:hover {
+    background-image: url(/images/zlodej-color-small.png?version=ceea5b5fb976aa0a619b270ef22f40f4);
+}
+
+.knez {
+    background-image: url(/images/knez-monochrome-small.png?version=38d4be6730714f69b52683c3902ee5e0);
+}
+
+.knez:hover {
+    background-image: url(/images/knez-color-small.png?version=6f473b4ad45ab03895b3403365f4845c);
+}
+
+.ppj {
+    background-image: url(/images/ppj-monochrome-small.png?version=a210b46e754f7038bd8ab97560eec0dc);
+}
+
+.ppj:hover {
+    background-image: url(/images/ppj-color-small.png?version=bf28c1b78441948958d66ddcc9de9c37);
+}
+
+.altar {
+    background-image: url(/images/altar-monochrome.png?version=743ce55ced9430e591e9bbd0e69fdee0);
+    color: black;
+}
+
+.altar:hover {
+    background-image: url(/images/altar-color.png?version=babbc206f1d07a29077c787e5a35be2f);
+}
+
 a.altar:hover {
     color: white;
+}
+
+.neviditelna-kniha {
+    background-image: url(/images/neviditelna-kniha-monochrome.png?version=58964963922df4c0d4312468daceeacf);
+    color: black;
+}
+
+.neviditelna-kniha:hover {
+    background-image: url(/images/neviditelna-kniha-color.png?version=1c28b0f33c65f3a5de719e1947f9297c);
+}
+
+.draci-doupe-cz {
+    background-image: url(/images/draci-doupe-cz-monochrome.png?version=4906cd2eedc60a20f7aacdb76f83d5d5);
+    color: black;
+}
+
+.draci-doupe-cz:hover {
+    background-image: url(/images/draci-doupe-cz-color.png?version=da2fc09b053d157cf08bcfa566ad33db);
+}
+
+.gamecon {
+    background-image: url(/images/gamecon-monochrome.png?version=0a48af9c83fb0738839bd57adb47e321);
+    color: black;
+}
+
+.gamecon:hover {
+    background-image: url(/images/gamecon-color.png?version=f99be1279da24cf649e8abc681c0f157);
+}
+
+.dorn {
+    background-image: url(/images/dorn-monochrome.png?version=c87f589247ef05388112b3ddf6d44e86);
+    color: black;
+}
+
+.dorn:hover {
+    background-image: url(/images/dorn-color.png?version=531d3730a33004ea611f3d11930ff51e);
+}
+
+.rise-snu {
+    background-image: url(/images/rise-snu-monochrome.png?version=4f978708a27a69d4861f99514bdf80ec);
+    color: black;
+}
+
+.rise-snu:hover {
+    background-image: url(/images/rise-snu-color.png?version=02c5d405ba240281183a64f2bba2c04b);
+}
+
+.legie {
+    background-image: url(/images/legie-monochrome.png?version=d54ce998d57a78dccc40893b2cc8f8ab);
+    color: black;
+}
+
+.legie:hover {
+    background-image: url(/images/legie-color.png?version=09f2fbdceb050bdd8ccb18ad5627c6c0);
+}
+
+.drd-2 {
+    background-image: url(/images/drd2-monochrome.png?version=764091e615eda1ddbb85718dba264bb8);
+    color: black;
+}
+
+.drd-2:hover {
+    background-image: url(/images/drd2-color.png?version=60893eb78e977ec0980e356685557e4c);
+}
+
+.draci-hlidka {
+    background-image: url(/images/draci-hlidka-monochrome.png?version=7e82c614b88c7a9b5415b037c735345c);
+    color: black;
+}
+
+.draci-hlidka:hover {
+    background-image: url(/images/draci-hlidka-color.png?version=609f02e8f4b2d40a4b98323e0215bb8f);
+}
+
+.jeskyne-a-draci {
+    background-image: url(/images/jeskyne-a-draci-monochrome.png?version=3989dd77ed6ba0d3637503a96f37cd59);
+    color: black;
+}
+
+.jeskyne-a-draci:hover {
+    background-image: url(/images/jeskyne-a-draci-color.png?version=a857302aade763115c83427efb3918fb);
+}
+
+.drakkar {
+    background-image: url(/images/drakkar-monochrome.png?version=37deb792b18d81e524fc11c59d24b668);
+    color: black;
+}
+
+.drakkar:hover {
+    background-image: url(/images/drakkar-color.png?version=dfe09141f3e8f83c1363eccd8bce29c0);
 }
 
 .small-image {
     background-position: center;
     background-size: contain;
+}
+
+.d20 {
+    background-image: url(/images/d20-monochrome.png?version=dc5a9394685518d4fd5d237cd8ad3185);
+    color: black;
+}
+
+.d20:hover {
+    background-image: url(/images/d20-color.png?version=748cad78bdb54c5d6b29c568d90577dc);
+}
+
+.immortal-fighters {
+    background-image: url(/images/immortal-fighters-monochrome.png);
+}
+
+.immortal-fighters:hover {
+    background-image: url(/images/immortal-fighters-color.png);
+}
+
+.andor {
+    background-image: url(/images/andor-monochrome.png);
+}
+
+.andor:hover {
+    background-image: url(/images/andor-color.png);
+}
+
+.theurg-calculator {
+    background-image: url(/images/theurg-calculator-monochrome-small.png?version=fa0b717725d9b18298370b2fbd785589);
+}
+
+.theurg-calculator:hover {
+    background-image: url(/images/theurg-calculator-color-small.png?version=3d28afd6ded160444df0aea525eaf456);
+}
+
+.fight-calculator {
+    background-image: url(/images/fight-calculator-monochrome.png?version=9fe3dcd355ebbec654d7f6130708e9ac);
+}
+
+.fight-calculator:hover {
+    background-image: url(/images/fight-calculator-color.png?version=840f72b9b2782d9b6e078221cb61a73d);
+}
+
+.rejstrik-pph {
+    background-image: url(/images/rejstrik-ppj-monochrome.png?version=7e16a0fa9c2b62b6f1f9c82022f8320e);
+}
+
+.rejstrik-pph:hover {
+    background-image: url(/images/rejstrik-ppj-color.png?version=fad6d9f00bf58d32a825bc78695579ec);
+}
+
+.tabulky-pph {
+    background-image: url(/images/tabulky-pph-monochrome.png?version=6994250719e75ad36b3d7661a1c4be21);
+}
+
+.tabulky-pph:hover {
+    background-image: url(/images/tabulky-pph-color.png?version=70a06d8357a9ffb23c67436537862a2b);
+}
+
+.severni-taria {
+    background-image: url(/images/severni-taria-monochrome.png?version=190cfc750701a261a2ed015676b1ea81);
+}
+
+.severni-taria:hover {
+    background-image: url(/images/severni-taria-color.png?version=83938cae9c0371cf73e7fceb32eb9490);
+}
+
+.taria-zahvozdi {
+    background-image: url(/images/taria-zahvozdi-monochrome.png?version=79b2ca88e86add3c9d9135c1d9c2dfe5);
+}
+
+.taria-zahvozdi:hover {
+    background-image: url(/images/taria-zahvozdi-color.png?version=5d7d65c9bad8126bf0465912e9949421);
+}
+
+.taria {
+    background-image: url(/images/taria-monochrome.png?version=89650ed308472309056cc3946f86c1bd);
+}
+
+.taria:hover {
+    background-image: url(/images/taria-color.png?version=0edfa464c2ca94435f7b2d7b748526d5);
+}
+
+.rpgforum {
+    background-image: url(/images/rpgforum-monochrome.png?version=468601363db28c973ef5c040af4079b0);
+}
+
+.rpgforum:hover {
+    background-image: url(/images/rpgforum-color.png?version=531a280c015058da352fc2886d962468);
+}
+
+.fall-calculator {
+    background-image: url(/images/falling-monochrome.png?version=0c5df853413fc9da2e030fadb2a4d4d5);
+}
+
+.fall-calculator:hover {
+    background-image: url(/images/falling-color.png?version=14e58bba795523c49dfd2253b27778c9);
+}
+
+.proroctvi {
+    background-image: url(/images/proroctvi-monochrome.png?version=20a318f2e2faf66657c7a46d3f79e870);
+}
+
+.proroctvi:hover {
+    background-image: url(/images/proroctvi-color.png?version=b9127790ce5f70ade0bee03271720c03);
 }
