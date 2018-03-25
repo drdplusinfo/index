@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-rules-html-skeleton.git",
-                "reference": "2874a4a5dda77ecdd774f8fa4808f581175c50cf"
+                "reference": "bec3cf9a3300c244809f031c590b179fd6ed5ea7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/2874a4a5dda77ecdd774f8fa4808f581175c50cf",
-                "reference": "2874a4a5dda77ecdd774f8fa4808f581175c50cf",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/bec3cf9a3300c244809f031c590b179fd6ed5ea7",
+                "reference": "bec3cf9a3300c244809f031c590b179fd6ed5ea7",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2018-03-23 10:40:16"
+            "time": "2018-03-23 15:56:11"
         },
         {
             "name": "granam/exceptions-hierarchy",
@@ -458,16 +458,16 @@
         },
         {
             "name": "piwik/device-detector",
-            "version": "3.10.0",
+            "version": "3.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matomo-org/device-detector.git",
-                "reference": "d2769e8b6e983cf31666a0f5b921ef1c8564cfb1"
+                "reference": "76a9e32ac6842239ac66a3877079cbfb84f29789"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/d2769e8b6e983cf31666a0f5b921ef1c8564cfb1",
-                "reference": "d2769e8b6e983cf31666a0f5b921ef1c8564cfb1",
+                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/76a9e32ac6842239ac66a3877079cbfb84f29789",
+                "reference": "76a9e32ac6842239ac66a3877079cbfb84f29789",
                 "shasum": ""
             },
             "require": {
@@ -508,7 +508,7 @@
                 "parser",
                 "useragent"
             ],
-            "time": "2018-03-05 12:45:57"
+            "time": "2018-03-23 15:19:45"
         },
         {
             "name": "roave/security-advisories",
@@ -724,16 +724,16 @@
         },
         {
             "name": "tracy/tracy",
-            "version": "v2.4.12",
+            "version": "v2.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "4182ce7b92f67002509b7fa2fc34bd84deea0b24"
+                "reference": "ead5141731a21cfd0710b092351d923549d2b2ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/4182ce7b92f67002509b7fa2fc34bd84deea0b24",
-                "reference": "4182ce7b92f67002509b7fa2fc34bd84deea0b24",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/ead5141731a21cfd0710b092351d923549d2b2ad",
+                "reference": "ead5141731a21cfd0710b092351d923549d2b2ad",
                 "shasum": ""
             },
             "require": {
@@ -785,7 +785,7 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2018-02-28 00:49:47"
+            "time": "2018-03-23 17:15:58"
         }
     ],
     "packages-dev": [
