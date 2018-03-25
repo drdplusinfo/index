@@ -348,17 +348,16 @@ a.altar:hover {
 }
 
 .drakkar {
-    background-image: url(/images/drakkar-monochrome.png?version=37deb792b18d81e524fc11c59d24b668);
-    color: black;
-}
-
-.drakkar:hover {
-    background-image: url(/images/drakkar-color.png?version=dfe09141f3e8f83c1363eccd8bce29c0);
+    background-image: url(/images/drakkar.png);
 }
 
 .small-image {
-    background-position: center;
-    background-size: contain;
+    background-size: cover;
+    background-position-y: top;
+}
+
+.small-image:hover {
+    background-position-y: bottom;
 }
 
 .d20 {
@@ -379,11 +378,7 @@ a.altar:hover {
 }
 
 .andor {
-    background-image: url(/images/andor-monochrome.png);
-}
-
-.andor:hover {
-    background-image: url(/images/andor-color.png);
+    background-image: url(/images/andor.png);
 }
 
 .theurg-calculator {
