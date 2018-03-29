@@ -1,5 +1,4 @@
 
-
 .journals {
     background-image: url(/images/osobni-denik-monochrome.png?version=393021816730729dcccfbb6d510f2342);
 }
@@ -227,7 +226,11 @@
 }
 
 .drakkar {
-    background-image: url(/images/drakkar.png?version=6d9ea301b62a8c557b33ce8cca4bd13a);
+    background-image: url(/images/drakkar-monochrome.png?version=37deb792b18d81e524fc11c59d24b668);
+}
+
+.drakkar:hover {
+    background-image: url(/images/drakkar-color.png?version=dfe09141f3e8f83c1363eccd8bce29c0);
 }
 
 .d20 {
@@ -248,7 +251,11 @@
 }
 
 .andor {
-    background-image: url(/images/andor.png?version=528bcd2897dbc158cb34965340ea7da8);
+    background-image: url(/images/andor-monochrome.png?version=2bdb1f072791abc43f154b74fd926d23);
+}
+
+.andor:hover {
+    background-image: url(/images/andor-color.png?version=c779deff478a414a7e1b1f6cc1116892);
 }
 
 .theurg-calculator {

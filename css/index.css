@@ -365,19 +365,19 @@ a.altar:hover {
 }
 
 .immortal-fighters {
-    background-image: url(/images/immortal-fighters-monochrome.png);
+    background-image: url(/images/immortal-fighters-monochrome.png?version=5e2e85f4a0782f3021d96b6eb7440258);
 }
 
 .immortal-fighters:hover {
-    background-image: url(/images/immortal-fighters-color.png);
+    background-image: url(/images/immortal-fighters-color.png?version=f047ffb9769926af7697090c22785e0f);
 }
 
 .andor {
-    background-image: url(/images/andor-monochrome.png);
+    background-image: url(/images/andor-monochrome.png?version=2bdb1f072791abc43f154b74fd926d23);
 }
 
 .andor:hover {
-    background-image: url(/images/andor-color.png);
+    background-image: url(/images/andor-color.png?version=c779deff478a414a7e1b1f6cc1116892);
 }
 
 .theurg-calculator {
