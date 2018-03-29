@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d00facee154419279d270251787b5003",
-    "content-hash": "d852ba4ed1e69735030281c22bd7c07c",
+    "hash": "0ddf8db936faeb30e9411454f2485846",
+    "content-hash": "4fa0fda91f5c107606c1720a515b561a",
     "packages": [
         {
             "name": "drd-plus/rules-html-skeleton",
@@ -2250,9 +2250,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "roave/security-advisories": 20,
         "granam/string": 20,
-        "drd-plus/rules-html-skeleton": 20
+        "drd-plus/rules-html-skeleton": 20,
+        "roave/security-advisories": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
