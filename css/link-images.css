@@ -330,6 +330,14 @@
     background-image: url(/images/falling-color.png?version=14e58bba795523c49dfd2253b27778c9);
 }
 
+.destruction-calculator {
+    background-image: url(/images/destruction-monochrome.png?version=0c5df853413fc9da2e030fadb2a4d4d5);
+}
+
+.destruction-calculator:hover {
+    background-image: url(/images/destruction-color.png?version=14e58bba795523c49dfd2253b27778c9);
+}
+
 .proroctvi {
     background-image: url(/images/proroctvi-monochrome.png?version=20a318f2e2faf66657c7a46d3f79e870);
 }
