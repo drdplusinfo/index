@@ -258,6 +258,14 @@
     background-image: url(/images/andor-color.png?version=c779deff478a414a7e1b1f6cc1116892);
 }
 
+.pj-craft {
+    background-image: url(/images/pj-craft-monochrome.png?version=0b41f2ffbb7e2ab9c04a3386852d4261);
+}
+
+.pj-craft:hover {
+    background-image: url(/images/pj-craft-color.png?version=7dc1b26bc4449900627cfba229075100);
+}
+
 .theurg-calculator {
     background-image: url(/images/theurg-calculator-monochrome-small.png?version=fa0b717725d9b18298370b2fbd785589);
 }
@@ -331,11 +339,11 @@
 }
 
 .destruction-calculator {
-    background-image: url(/images/destruction-monochrome.png?version=0c5df853413fc9da2e030fadb2a4d4d5);
+    background-image: url(/images/destruction-monochrome.png?version=2ab5b910b58377999529ef68dbea5c5b);
 }
 
 .destruction-calculator:hover {
-    background-image: url(/images/destruction-color.png?version=14e58bba795523c49dfd2253b27778c9);
+    background-image: url(/images/destruction-color.png?version=49b4faa06cf4a2dc4e8cc2c177294385);
 }
 
 .proroctvi {
