@@ -4,24 +4,75 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0ddf8db936faeb30e9411454f2485846",
+    "hash": "30b89207d368c994ebe7d40b0c420163",
     "content-hash": "4fa0fda91f5c107606c1720a515b561a",
     "packages": [
+        {
+            "name": "drd-plus/frontend-skeleton",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaroslavtyc/drd-plus-frontend-skeleton.git",
+                "reference": "c0e23cd07e9deb35f0a9c46bf9599b472260f2f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-frontend-skeleton/zipball/c0e23cd07e9deb35f0a9c46bf9599b472260f2f7",
+                "reference": "c0e23cd07e9deb35f0a9c46bf9599b472260f2f7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "granam/exceptions-hierarchy": "dev-master",
+                "granam/string": "dev-master",
+                "php": ">=7.1",
+                "phpgt/dom": "~1.0",
+                "phpmailer/phpmailer": "^6.0",
+                "piwik/device-detector": "^3.9",
+                "tracy/tracy": "^2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0",
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DrdPlus\\": "DrdPlus/",
+                    "Tests\\": "Tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Skeleton for DrD+ pages",
+            "keywords": [
+                "Skeleton",
+                "drd plus",
+                "frontend",
+                "helper",
+                "pages",
+                "view"
+            ],
+            "time": "2018-05-20 12:52:22"
+        },
         {
             "name": "drd-plus/rules-html-skeleton",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-rules-html-skeleton.git",
-                "reference": "eaa8ce4b49d3a22634a43a39609dd784c2f1fc67"
+                "reference": "f3971e04c9b46844efb2678acba5ff6345912065"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/eaa8ce4b49d3a22634a43a39609dd784c2f1fc67",
-                "reference": "eaa8ce4b49d3a22634a43a39609dd784c2f1fc67",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/f3971e04c9b46844efb2678acba5ff6345912065",
+                "reference": "f3971e04c9b46844efb2678acba5ff6345912065",
                 "shasum": ""
             },
             "require": {
+                "drd-plus/frontend-skeleton": "dev-master",
                 "ext-mbstring": "*",
                 "granam/exceptions-hierarchy": "dev-master",
                 "granam/string": "dev-master",
@@ -38,8 +89,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "DrdPlus\\": "DrdPlus/",
-                    "Tests\\": "Tests/"
+                    "DrdPlus\\": "DrdPlus/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -53,7 +103,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2018-04-22 13:37:05"
+            "time": "2018-05-20 13:03:33"
         },
         {
             "name": "granam/exceptions-hierarchy",
@@ -256,16 +306,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/granam-tools.git",
-                "reference": "537b3598cdd6ea4b25c242a62477bc581afd8f06"
+                "reference": "d0e8759aedd1c26c117616102941d38e49ccd1a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/granam-tools/zipball/537b3598cdd6ea4b25c242a62477bc581afd8f06",
-                "reference": "537b3598cdd6ea4b25c242a62477bc581afd8f06",
+                "url": "https://api.github.com/repos/jaroslavtyc/granam-tools/zipball/d0e8759aedd1c26c117616102941d38e49ccd1a6",
+                "reference": "d0e8759aedd1c26c117616102941d38e49ccd1a6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "granam/strict-object": "dev-master",
+                "php": ">=7.1"
             },
             "require-dev": {
                 "doctrine/orm": "2.*",
@@ -298,7 +349,7 @@
                 "php",
                 "string"
             ],
-            "time": "2018-04-22 12:55:42"
+            "time": "2018-05-08 13:20:02"
         },
         {
             "name": "mustangostang/spyc",
@@ -495,16 +546,16 @@
         },
         {
             "name": "piwik/device-detector",
-            "version": "3.10.1",
+            "version": "3.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matomo-org/device-detector.git",
-                "reference": "76a9e32ac6842239ac66a3877079cbfb84f29789"
+                "reference": "67e96595cd7649b7967533053fcbfbe02d5c55a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/76a9e32ac6842239ac66a3877079cbfb84f29789",
-                "reference": "76a9e32ac6842239ac66a3877079cbfb84f29789",
+                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/67e96595cd7649b7967533053fcbfbe02d5c55a3",
+                "reference": "67e96595cd7649b7967533053fcbfbe02d5c55a3",
                 "shasum": ""
             },
             "require": {
@@ -545,7 +596,7 @@
                 "parser",
                 "useragent"
             ],
-            "time": "2018-03-23 15:19:45"
+            "time": "2018-05-07 19:33:29"
         },
         {
             "name": "roave/security-advisories",
@@ -553,17 +604,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "9deddd9fc64853356d688a1514318abb2d9f3d4b"
+                "reference": "6fe712594835e5b70de30aec5fc244a7bd8464cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/9deddd9fc64853356d688a1514318abb2d9f3d4b",
-                "reference": "9deddd9fc64853356d688a1514318abb2d9f3d4b",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/6fe712594835e5b70de30aec5fc244a7bd8464cd",
+                "reference": "6fe712594835e5b70de30aec5fc244a7bd8464cd",
                 "shasum": ""
             },
             "conflict": {
                 "3f/pygmentize": "<1.2",
-                "adodb/adodb-php": "<5.20.6",
+                "adodb/adodb-php": "<5.20.12",
                 "amphp/artax": "<1.0.6|>=2,<2.0.6",
                 "amphp/http": "<1.0.1",
                 "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
@@ -589,13 +640,14 @@
                 "doctrine/mongodb-odm-bundle": ">=2,<3.0.1",
                 "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1",
                 "dompdf/dompdf": ">=0.6,<0.6.2",
-                "drupal/core": ">=7,<7.58|>=8,<8.4.6|>=8.5,<8.5.1",
-                "drupal/drupal": ">=7,<7.58|>=8,<8.4.6|>=8.5,<8.5.1",
+                "drupal/core": ">=7,<7.59|>=8,<8.4.8|>=8.5,<8.5.3",
+                "drupal/drupal": ">=7,<7.59|>=8,<8.4.8|>=8.5,<8.5.3",
                 "erusev/parsedown": "<1.7",
                 "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.3|>=5.4,<5.4.11.3|>=2017.8,<2017.8.1.1|>=2017.12,<2017.12.2.1",
                 "firebase/php-jwt": "<2",
                 "friendsofsymfony/rest-bundle": ">=1.2,<1.2.2",
                 "friendsofsymfony/user-bundle": ">=1.2,<1.3.5",
+                "fuel/core": "<1.8.1",
                 "gree/jose": "<=2.2",
                 "gregwar/rst": "<1.0.3",
                 "guzzlehttp/guzzle": ">=6,<6.2.1|>=4.0.0-rc2,<4.2.4|>=5,<5.3.1",
@@ -708,7 +760,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-04-22 05:30:14"
+            "time": "2018-05-11 06:55:15"
         },
         {
             "name": "symfony/css-selector",
@@ -765,16 +817,16 @@
         },
         {
             "name": "tracy/tracy",
-            "version": "v2.4.13",
+            "version": "v2.4.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "ead5141731a21cfd0710b092351d923549d2b2ad"
+                "reference": "229249212e041bc3cd5d88f65965d9391dad3852"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/ead5141731a21cfd0710b092351d923549d2b2ad",
-                "reference": "ead5141731a21cfd0710b092351d923549d2b2ad",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/229249212e041bc3cd5d88f65965d9391dad3852",
+                "reference": "229249212e041bc3cd5d88f65965d9391dad3852",
                 "shasum": ""
             },
             "require": {
@@ -826,7 +878,7 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2018-03-23 17:15:58"
+            "time": "2018-05-04 11:54:21"
         }
     ],
     "packages-dev": [
