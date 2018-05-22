@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "30b89207d368c994ebe7d40b0c420163",
+    "hash": "2f00a189ded08f72ecea64c2c8a8f848",
     "content-hash": "4fa0fda91f5c107606c1720a515b561a",
     "packages": [
         {
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-frontend-skeleton.git",
-                "reference": "c0e23cd07e9deb35f0a9c46bf9599b472260f2f7"
+                "reference": "2310dfd5e870de7b0abc88829df0c2408d88f789"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-frontend-skeleton/zipball/c0e23cd07e9deb35f0a9c46bf9599b472260f2f7",
-                "reference": "c0e23cd07e9deb35f0a9c46bf9599b472260f2f7",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-frontend-skeleton/zipball/2310dfd5e870de7b0abc88829df0c2408d88f789",
+                "reference": "2310dfd5e870de7b0abc88829df0c2408d88f789",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "pages",
                 "view"
             ],
-            "time": "2018-05-20 12:52:22"
+            "time": "2018-05-22 14:33:25"
         },
         {
             "name": "drd-plus/rules-html-skeleton",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-rules-html-skeleton.git",
-                "reference": "f3971e04c9b46844efb2678acba5ff6345912065"
+                "reference": "2114e2577bd3eb6425d78b29741b93d9777b004d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/f3971e04c9b46844efb2678acba5ff6345912065",
-                "reference": "f3971e04c9b46844efb2678acba5ff6345912065",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/2114e2577bd3eb6425d78b29741b93d9777b004d",
+                "reference": "2114e2577bd3eb6425d78b29741b93d9777b004d",
                 "shasum": ""
             },
             "require": {
@@ -103,7 +103,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2018-05-20 13:03:33"
+            "time": "2018-05-22 14:27:25"
         },
         {
             "name": "granam/exceptions-hierarchy",
@@ -604,12 +604,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "6fe712594835e5b70de30aec5fc244a7bd8464cd"
+                "reference": "79ef6566b9c7fe6c1b6f6d12e5729d5cb545ac69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/6fe712594835e5b70de30aec5fc244a7bd8464cd",
-                "reference": "6fe712594835e5b70de30aec5fc244a7bd8464cd",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/79ef6566b9c7fe6c1b6f6d12e5729d5cb545ac69",
+                "reference": "79ef6566b9c7fe6c1b6f6d12e5729d5cb545ac69",
                 "shasum": ""
             },
             "conflict": {
@@ -620,7 +620,7 @@
                 "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
                 "aws/aws-sdk-php": ">=3,<3.2.1",
                 "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
-                "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.0.15|>=3.1,<3.1.4",
+                "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.0.15|>=3.1,<3.1.4|>=3.4,<3.4.14|>=3.5,<3.5.17|>=3.6,<3.6.4",
                 "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
                 "cartalyst/sentry": "<=2.1.6",
                 "codeigniter/framework": "<=3.0.6",
@@ -708,7 +708,7 @@
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-                "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
+                "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
                 "titon/framework": ">=0,<9.9.99",
                 "twig/twig": "<1.20",
                 "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.22|>=8,<8.7.5",
@@ -760,7 +760,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-05-11 06:55:15"
+            "time": "2018-05-21 07:43:38"
         },
         {
             "name": "symfony/css-selector",
