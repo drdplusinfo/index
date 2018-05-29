@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DrdPlus\Index;
 
-use DrdPlus\RulesSkeleton\AbstractPublicFiles;
+use DrdPlus\FrontendSkeleton\AbstractPublicFiles;
 
 class ColorImages extends AbstractPublicFiles
 {
