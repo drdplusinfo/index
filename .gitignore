@@ -1,12 +1,5 @@
 /.idea
 /vendor
-/css/generic
 /js/generic
 /images/generic
-/web/css
-/web/images
-/web/js
-/web/pdf
-/web/favicon.ico
 /phpunit_log
-/cache
