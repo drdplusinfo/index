@@ -5,8 +5,6 @@ $vendorRoot = $vendorRoot ?? $documentRoot . '/vendor';
 
 require_once $vendorRoot . '/autoload.php';
 
-$hideHomeButton = true;
-
 $controller = $controller ?? new \DrdPlus\RulesSkeleton\RulesController(
         $documentRoot,
         $webRoot,
@@ -14,5 +12,6 @@ $controller = $controller ?? new \DrdPlus\RulesSkeleton\RulesController(
     );
 $controller->setFreeAccess();
 $controller->setContactsFixed();
+$controller->hideHomeButton();
 
 include $vendorRoot . '/drd-plus/rules-skeleton/index.php';
