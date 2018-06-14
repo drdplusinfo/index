@@ -7,7 +7,7 @@ require_once $vendorRoot . '/autoload.php';
 
 $hideHomeButton = true;
 
-$controller = $controller ?? new \DrdPlus\RulesSkeleton\Controller(
+$controller = $controller ?? new \DrdPlus\RulesSkeleton\RulesController(
         $documentRoot,
         $webRoot,
         $vendorRoot
