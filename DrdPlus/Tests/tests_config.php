@@ -15,3 +15,4 @@ $testsConfiguration->setBlockNamesToExpectedContent([]);
 $testsConfiguration->setExpectedWebName('DrD+ pravidla a odkazy');
 $testsConfiguration->setExpectedPageTitle('📚 DrD+ pravidla a odkazy');
 $testsConfiguration->disableHasMoreVersions();
+$testsConfiguration->disableHasLocalLinks();
