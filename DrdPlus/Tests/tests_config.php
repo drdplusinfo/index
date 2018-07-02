@@ -1,6 +1,6 @@
 <?php
 global $testsConfiguration;
-$testsConfiguration = new \DrdPlus\Tests\RulesSkeleton\TestsConfiguration('https://drdplus.info');
+$testsConfiguration = new \DrdPlus\Tests\RulesSkeleton\TestsConfiguration('http://drdplus.loc', 'https://drdplus.info');
 $testsConfiguration->disableHasTables();
 $testsConfiguration->disableHasAuthors();
 $testsConfiguration->disableHasProtectedAccess();
