@@ -28,7 +28,7 @@
     "pre-autoload-dump": [
       "rm -f DrdPlus/Tests/RulesSkeleton && ln -s ../../vendor/drd-plus/rules-skeleton/DrdPlus/Tests/RulesSkeleton DrdPlus/Tests/",
       "rm -fr ./css/generic && cp -r ./vendor/drd-plus/rules-skeleton/css/generic ./css/generic",
-      "rm -fr ./images/generic && cp -r ../vendor/drd-plus/rules-skeleton/images/generic ./images/",
+      "rm -fr ./images/generic && cp -r ./vendor/drd-plus/rules-skeleton/images/generic ./images/",
       "rm -fr ./js/generic && cp -r ./vendor/drd-plus/rules-skeleton/js/generic ./js/generic",
       "find ./cache -mindepth 2 -type f -exec rm {} +",
       "find ./vendor -type d -name .git -exec rm -fr {} +",
