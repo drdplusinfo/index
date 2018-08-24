@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/drdplus-frontend-skeleton.git",
-                "reference": "0bf961cf0e240a42189ac4c04c893446577ffa32"
+                "reference": "83278caa2bb029cc3ad201d52197be2fa9882839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/drdplus-frontend-skeleton/zipball/0bf961cf0e240a42189ac4c04c893446577ffa32",
-                "reference": "0bf961cf0e240a42189ac4c04c893446577ffa32",
+                "url": "https://api.github.com/repos/drdplusinfo/drdplus-frontend-skeleton/zipball/83278caa2bb029cc3ad201d52197be2fa9882839",
+                "reference": "83278caa2bb029cc3ad201d52197be2fa9882839",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "pages",
                 "view"
             ],
-            "time": "2018-08-24 14:22:08"
+            "time": "2018-08-24 14:26:59"
         },
         {
             "name": "drdplus/rules-skeleton",
@@ -79,7 +79,7 @@
             "source": {
                 "type": "git",
                 "url": "/home/jaroslav/projects/drdplus/rules/rules-skeleton",
-                "reference": "cc6bdc065957e91278d09fe2e383776e13a4af95"
+                "reference": "22bf94e1192090afa9957dcc362ddb7ebc7fe414"
             },
             "require": {
                 "composer-plugin-api": "^1.0",
@@ -117,7 +117,7 @@
                 "rules",
                 "skeleton"
             ],
-            "time": "2018-08-23 16:28:01"
+            "time": "2018-08-24 14:24:23"
         },
         {
             "name": "erusev/parsedown",
