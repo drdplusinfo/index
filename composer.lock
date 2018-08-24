@@ -4,12 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c83d0eec1b4893d7eba35b4137b5f5b4",
-    "content-hash": "f30b24a1e8594472b6d9c8eb6f0422eb",
+    "hash": "54c3c83609da0c49809fbffa72ca9dfc",
+    "content-hash": "a3d57eca2395cc9c518dbdaca7915a54",
     "packages": [
         {
             "name": "drdplus/frontend-skeleton",
-            "version": "dev-master",
+            "version": "1.0.47",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/drdplus-frontend-skeleton.git",
@@ -75,15 +75,21 @@
         },
         {
             "name": "drdplus/rules-skeleton",
-            "version": "dev-master",
+            "version": "1.0.25",
             "source": {
                 "type": "git",
-                "url": "/home/jaroslav/projects/drdplus/rules/rules-skeleton",
-                "reference": "22bf94e1192090afa9957dcc362ddb7ebc7fe414"
+                "url": "https://github.com/drdplusinfo/drdplus-rules-skeleton.git",
+                "reference": "56e212727c7683f5fc47523bfce46d4bc9ccc352"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drdplusinfo/drdplus-rules-skeleton/zipball/56e212727c7683f5fc47523bfce46d4bc9ccc352",
+                "reference": "56e212727c7683f5fc47523bfce46d4bc9ccc352",
+                "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0",
-                "drdplus/frontend-skeleton": "dev-master",
+                "drdplus/frontend-skeleton": "~1.0",
                 "ext-mbstring": "*",
                 "php": ">=7.1",
                 "phpgt/dom": "~1.0",
@@ -107,17 +113,18 @@
                     "DrdPlus\\": "DrdPlus/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Skeleton for DrD+ rules as HTML",
             "keywords": [
+                "Skeleton",
                 "drd plus",
                 "helper",
-                "rules",
-                "skeleton"
+                "rules"
             ],
-            "time": "2018-08-24 14:24:23"
+            "time": "2018-08-24 14:58:56"
         },
         {
             "name": "erusev/parsedown",
@@ -2475,7 +2482,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drdplus/rules-skeleton": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
