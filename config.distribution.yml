@@ -1,7 +1,7 @@
 web:
   last_stable_version: 'master'
   protected_access: false
-  repository_url: git@github.com:drdplusinfo/index-web.git
+  repository_url: git@bitbucket.org:drdplusinfo/index-web.git
   eshop_url: https://obchod.altar.cz/
   menu_position_fixed: true
   show_home_button: false
