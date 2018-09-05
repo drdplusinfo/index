@@ -9,7 +9,6 @@ $testsConfiguration->disableHasCharacterSheet();
 $testsConfiguration->disableHasLinksToJournals();
 $testsConfiguration->disableHasLinkToSingleJournal();
 $testsConfiguration->disableHasDebugContacts();
-$testsConfiguration->disableHasIntroduction();
 $testsConfiguration->disableHasCustomBodyContent();
 $testsConfiguration->setBlockNamesToExpectedContent([]);
 $testsConfiguration->setExpectedWebName('DrD+ pravidla a odkazy');
