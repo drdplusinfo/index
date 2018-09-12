@@ -755,64 +755,6 @@
         ]
     },
     {
-        "name": "granam/string",
-        "version": "3.1.0",
-        "version_normalized": "3.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/jaroslavtyc/granam-string.git",
-            "reference": "1cebae4311a10029e9a1a94a668d871627b94143"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/jaroslavtyc/granam-string/zipball/1cebae4311a10029e9a1a94a668d871627b94143",
-            "reference": "1cebae4311a10029e9a1a94a668d871627b94143",
-            "shasum": ""
-        },
-        "require": {
-            "granam/scalar": "^4.0",
-            "granam/strict-object": "^3.0",
-            "php": ">=7.1"
-        },
-        "require-dev": {
-            "ext-mbstring": "*",
-            "granam/exceptions-hierarchy": ">=4.0",
-            "mockery/mockery": "~1.0",
-            "phpunit/phpunit": "~7.0"
-        },
-        "suggest": {
-            "ext-iconv": "*",
-            "ext-intl": "*",
-            "ext-mbstring": "*"
-        },
-        "time": "2018-07-31 07:12:46",
-        "type": "project",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Granam\\": "Granam/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jaroslav Týc",
-                "homepage": "https://www.jaroslavtyc.com",
-                "role": "Original author"
-            }
-        ],
-        "description": "Lightweight string wrapper",
-        "homepage": "https://github.com/jaroslavtyc/granam-string",
-        "keywords": [
-            "object",
-            "php",
-            "string"
-        ]
-    },
-    {
         "name": "granam/exceptions-hierarchy",
         "version": "4.0.2",
         "version_normalized": "4.0.2.0",
@@ -2229,92 +2171,6 @@
         ]
     },
     {
-        "name": "phpunit/phpunit",
-        "version": "7.3.4",
-        "version_normalized": "7.3.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sebastianbergmann/phpunit.git",
-            "reference": "0356331bf62896dc56e3a15030b23b73f38b2935"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0356331bf62896dc56e3a15030b23b73f38b2935",
-            "reference": "0356331bf62896dc56e3a15030b23b73f38b2935",
-            "shasum": ""
-        },
-        "require": {
-            "doctrine/instantiator": "^1.1",
-            "ext-dom": "*",
-            "ext-json": "*",
-            "ext-libxml": "*",
-            "ext-mbstring": "*",
-            "ext-xml": "*",
-            "myclabs/deep-copy": "^1.7",
-            "phar-io/manifest": "^1.0.2",
-            "phar-io/version": "^2.0",
-            "php": "^7.1",
-            "phpspec/prophecy": "^1.7",
-            "phpunit/php-code-coverage": "^6.0.7",
-            "phpunit/php-file-iterator": "^2.0.1",
-            "phpunit/php-text-template": "^1.2.1",
-            "phpunit/php-timer": "^2.0",
-            "sebastian/comparator": "^3.0",
-            "sebastian/diff": "^3.0",
-            "sebastian/environment": "^3.1",
-            "sebastian/exporter": "^3.1",
-            "sebastian/global-state": "^2.0",
-            "sebastian/object-enumerator": "^3.0.3",
-            "sebastian/resource-operations": "^1.0",
-            "sebastian/version": "^2.0.1"
-        },
-        "conflict": {
-            "phpunit/phpunit-mock-objects": "*"
-        },
-        "require-dev": {
-            "ext-pdo": "*"
-        },
-        "suggest": {
-            "ext-soap": "*",
-            "ext-xdebug": "*",
-            "phpunit/php-invoker": "^2.0"
-        },
-        "time": "2018-09-05 09:58:53",
-        "bin": [
-            "phpunit"
-        ],
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "7.3-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "src/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Sebastian Bergmann",
-                "email": "sebastian@phpunit.de",
-                "role": "lead"
-            }
-        ],
-        "description": "The PHP Unit Testing framework.",
-        "homepage": "https://phpunit.de/",
-        "keywords": [
-            "phpunit",
-            "testing",
-            "xunit"
-        ]
-    },
-    {
         "name": "hamcrest/hamcrest-php",
         "version": "v2.0.0",
         "version_normalized": "2.0.0.0",
@@ -2467,18 +2323,78 @@
         ]
     },
     {
-        "name": "drdplus/frontend-skeleton",
-        "version": "1.0.84",
-        "version_normalized": "1.0.84.0",
+        "name": "granam/string",
+        "version": "3.2.0",
+        "version_normalized": "3.2.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/drdplusinfo/frontend-skeleton.git",
-            "reference": "059d345194f54bb4407e8f3c0c86ab4089e9343c"
+            "url": "https://github.com/granam/granam-string.git",
+            "reference": "39d5caa02260757c8c0154ecda144a8bc699255e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/059d345194f54bb4407e8f3c0c86ab4089e9343c",
-            "reference": "059d345194f54bb4407e8f3c0c86ab4089e9343c",
+            "url": "https://api.github.com/repos/granam/granam-string/zipball/39d5caa02260757c8c0154ecda144a8bc699255e",
+            "reference": "39d5caa02260757c8c0154ecda144a8bc699255e",
+            "shasum": ""
+        },
+        "require": {
+            "ext-intl": "*",
+            "ext-mbstring": "*",
+            "granam/scalar": "^4.0",
+            "granam/strict-object": "^3.0",
+            "php": ">=7.1"
+        },
+        "require-dev": {
+            "ext-mbstring": "*",
+            "granam/exceptions-hierarchy": ">=4.0",
+            "mockery/mockery": "~1.0",
+            "phpunit/phpunit": "~7.0"
+        },
+        "suggest": {
+            "ext-iconv": "*",
+            "ext-intl": "*",
+            "ext-mbstring": "*"
+        },
+        "time": "2018-09-08 10:07:08",
+        "type": "project",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Granam\\": "Granam/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jaroslav Týc",
+                "homepage": "https://www.jaroslavtyc.com",
+                "role": "Original author"
+            }
+        ],
+        "description": "Lightweight string wrapper",
+        "homepage": "https://github.com/jaroslavtyc/granam-string",
+        "keywords": [
+            "object",
+            "php",
+            "string"
+        ]
+    },
+    {
+        "name": "drdplus/frontend-skeleton",
+        "version": "1.0.88",
+        "version_normalized": "1.0.88.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drdplusinfo/frontend-skeleton.git",
+            "reference": "be9c86431d35f6113148513f3056a552cd045a4b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/be9c86431d35f6113148513f3056a552cd045a4b",
+            "reference": "be9c86431d35f6113148513f3056a552cd045a4b",
             "shasum": ""
         },
         "require": {
@@ -2492,7 +2408,7 @@
             "ext-yaml": "*",
             "ext-zlib": "*",
             "granam/exceptions-hierarchy": "^4.0",
-            "granam/string": "^3.1",
+            "granam/string": "^3.2",
             "php": ">=7.1",
             "phpgt/dom": "~1.0",
             "phpmailer/phpmailer": "^6.0",
@@ -2505,7 +2421,7 @@
             "phpunit/phpunit": "~7.0",
             "roave/security-advisories": "dev-master"
         },
-        "time": "2018-09-06 14:29:10",
+        "time": "2018-09-09 11:12:55",
         "bin": [
             "bin/assets"
         ],
@@ -2536,17 +2452,17 @@
     },
     {
         "name": "drdplus/rules-skeleton",
-        "version": "1.0.42",
-        "version_normalized": "1.0.42.0",
+        "version": "1.0.44",
+        "version_normalized": "1.0.44.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drdplusinfo/rules-skeleton.git",
-            "reference": "6da792734043a0260e02f9b7c848a81b28683030"
+            "reference": "70e2faebe9f52c04b76ac22fa99f1bc0d955449a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/6da792734043a0260e02f9b7c848a81b28683030",
-            "reference": "6da792734043a0260e02f9b7c848a81b28683030",
+            "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/70e2faebe9f52c04b76ac22fa99f1bc0d955449a",
+            "reference": "70e2faebe9f52c04b76ac22fa99f1bc0d955449a",
             "shasum": ""
         },
         "require": {
@@ -2566,7 +2482,7 @@
             "phpunit/phpunit": "~7.0",
             "roave/security-advisories": "dev-master"
         },
-        "time": "2018-09-06 08:48:40",
+        "time": "2018-09-12 11:08:08",
         "type": "composer-plugin",
         "extra": {
             "class": "DrdPlus\\RulesSkeleton\\SkeletonInjectorComposerPlugin"
@@ -2587,6 +2503,92 @@
             "drd plus",
             "helper",
             "rules"
+        ]
+    },
+    {
+        "name": "phpunit/phpunit",
+        "version": "7.3.5",
+        "version_normalized": "7.3.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sebastianbergmann/phpunit.git",
+            "reference": "7b331efabbb628c518c408fdfcaf571156775de2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7b331efabbb628c518c408fdfcaf571156775de2",
+            "reference": "7b331efabbb628c518c408fdfcaf571156775de2",
+            "shasum": ""
+        },
+        "require": {
+            "doctrine/instantiator": "^1.1",
+            "ext-dom": "*",
+            "ext-json": "*",
+            "ext-libxml": "*",
+            "ext-mbstring": "*",
+            "ext-xml": "*",
+            "myclabs/deep-copy": "^1.7",
+            "phar-io/manifest": "^1.0.2",
+            "phar-io/version": "^2.0",
+            "php": "^7.1",
+            "phpspec/prophecy": "^1.7",
+            "phpunit/php-code-coverage": "^6.0.7",
+            "phpunit/php-file-iterator": "^2.0.1",
+            "phpunit/php-text-template": "^1.2.1",
+            "phpunit/php-timer": "^2.0",
+            "sebastian/comparator": "^3.0",
+            "sebastian/diff": "^3.0",
+            "sebastian/environment": "^3.1",
+            "sebastian/exporter": "^3.1",
+            "sebastian/global-state": "^2.0",
+            "sebastian/object-enumerator": "^3.0.3",
+            "sebastian/resource-operations": "^1.0",
+            "sebastian/version": "^2.0.1"
+        },
+        "conflict": {
+            "phpunit/phpunit-mock-objects": "*"
+        },
+        "require-dev": {
+            "ext-pdo": "*"
+        },
+        "suggest": {
+            "ext-soap": "*",
+            "ext-xdebug": "*",
+            "phpunit/php-invoker": "^2.0"
+        },
+        "time": "2018-09-08 15:14:29",
+        "bin": [
+            "phpunit"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "7.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sebastian@phpunit.de",
+                "role": "lead"
+            }
+        ],
+        "description": "The PHP Unit Testing framework.",
+        "homepage": "https://phpunit.de/",
+        "keywords": [
+            "phpunit",
+            "testing",
+            "xunit"
         ]
     }
 ]
