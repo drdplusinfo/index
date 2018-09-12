@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "drdplus/frontend-skeleton",
-            "version": "1.0.88",
+            "version": "1.0.89",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/frontend-skeleton.git",
-                "reference": "be9c86431d35f6113148513f3056a552cd045a4b"
+                "reference": "3ef70f830b10422b85c6dc4f4242902e7d869970"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/be9c86431d35f6113148513f3056a552cd045a4b",
-                "reference": "be9c86431d35f6113148513f3056a552cd045a4b",
+                "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/3ef70f830b10422b85c6dc4f4242902e7d869970",
+                "reference": "3ef70f830b10422b85c6dc4f4242902e7d869970",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "pages",
                 "view"
             ],
-            "time": "2018-09-09 11:12:55"
+            "time": "2018-09-12 14:30:20"
         },
         {
             "name": "drdplus/rules-skeleton",
