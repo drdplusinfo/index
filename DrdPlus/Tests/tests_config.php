@@ -2,6 +2,7 @@
 global $testsConfiguration;
 $testsConfiguration = new \DrdPlus\Tests\RulesSkeleton\TestsConfiguration('https://drdplus.info');
 $testsConfiguration->disableHasTables();
+$testsConfiguration->setSomeExpectedTableIds([]);
 $testsConfiguration->disableHasAuthors();
 $testsConfiguration->disableHasProtectedAccess();
 $testsConfiguration->disableCanBeBoughtOnEshop();
