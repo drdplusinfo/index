@@ -57,21 +57,16 @@
     },
     {
         "name": "drdplus/rules-skeleton",
-        "version": "1.0.63",
-        "version_normalized": "1.0.63.0",
+        "version": "1.1.6",
+        "version_normalized": "1.1.6.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/drdplusinfo/rules-skeleton.git",
-            "reference": "5690e1881128f05e06edc773cebd4fb9104f5945"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/5690e1881128f05e06edc773cebd4fb9104f5945",
-            "reference": "5690e1881128f05e06edc773cebd4fb9104f5945",
-            "shasum": ""
+            "url": "/var/www/rules.skeleton",
+            "reference": "1b6ffee2490d78b962663262d7e6882f3e943c56"
         },
         "require": {
             "composer-plugin-api": "^1.0",
+            "drdplus/web-versions": "^1.0",
             "erusev/parsedown": "^1.7",
             "ext-curl": "*",
             "ext-dom": "*",
@@ -84,27 +79,75 @@
             "granam/strict-object": "^3.0",
             "granam/string": "^3.2",
             "granam/tools": "^3.0",
-            "mockery/mockery": "^1.1",
+            "granam/web-content-builder": "^1.0",
+            "granam/yaml-reader": "^1.0",
             "php": ">=7.1",
-            "phpgt/dom": "~1.0",
+            "phpgt/dom": "~1.1",
             "phpmailer/phpmailer": "^6.0",
-            "phpunit/phpunit": "~7.0",
             "piwik/device-detector": "^3.9",
             "tracy/tracy": "^2.4"
         },
         "require-dev": {
             "composer/composer": "^1.7",
-            "drdplus/rules-skeleton-web": "dev-master",
+            "mockery/mockery": "^1.2",
+            "phpunit/phpunit": "^7.5",
             "roave/security-advisories": "dev-master"
         },
-        "time": "2018-12-31T20:50:39+00:00",
-        "bin": [
-            "bin/assets"
-        ],
+        "time": "2019-01-18T07:36:03+00:00",
         "type": "composer-plugin",
         "extra": {
             "class": "DrdPlus\\RulesSkeleton\\SkeletonInjectorComposerPlugin"
         },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "DrdPlus\\": "DrdPlus/"
+            }
+        },
+        "scripts": {
+            "post-update-cmd": [
+                "php vendor/bin/assets --css --dir=css"
+            ],
+            "post-install-cmd": [
+                "php vendor/bin/assets --css --dir=css"
+            ]
+        },
+        "license": [
+            "MIT"
+        ],
+        "description": "Skeleton for DrD+ rules as HTML",
+        "keywords": [
+            "drd plus",
+            "helper",
+            "rules",
+            "skeleton"
+        ]
+    },
+    {
+        "name": "drdplus/web-versions",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drdplusinfo/web-versions.git",
+            "reference": "84f3a6243e02cfa71818c9eaa6b4adfb4d5f32fa"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drdplusinfo/web-versions/zipball/84f3a6243e02cfa71818c9eaa6b4adfb4d5f32fa",
+            "reference": "84f3a6243e02cfa71818c9eaa6b4adfb4d5f32fa",
+            "shasum": ""
+        },
+        "require": {
+            "granam/git": "^1.1",
+            "php": ">= 7.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.5",
+            "roave/security-advisories": "dev-master"
+        },
+        "time": "2019-01-17T14:12:38+00:00",
+        "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
@@ -112,50 +155,7 @@
             }
         },
         "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Skeleton for DrD+ rules as HTML",
-        "keywords": [
-            "Skeleton",
-            "drd plus",
-            "helper",
-            "rules"
-        ]
-    },
-    {
-        "name": "drdplus/rules-skeleton-web",
-        "version": "1.0.9",
-        "version_normalized": "1.0.9.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/drdplusinfo/rules-skeleton-web.git",
-            "reference": "0a8799f861d0046233b1f86f6cbfbbee939b2272"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton-web/zipball/0a8799f861d0046233b1f86f6cbfbbee939b2272",
-            "reference": "0a8799f861d0046233b1f86f6cbfbbee939b2272",
-            "shasum": ""
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^7.3"
-        },
-        "time": "2018-09-26T07:16:47+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Content for DrD+ rules skeleton",
-        "keywords": [
-            "Skeleton",
-            "content",
-            "drd plus",
-            "helper",
-            "rules"
-        ]
+        "description": "Reads available minor and patch versions of a web files repository"
     },
     {
         "name": "erusev/parsedown",
@@ -211,12 +211,12 @@
         "version_normalized": "4.0.2.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/jaroslavtyc/granam-exceptions-hierarchy.git",
+            "url": "https://github.com/granam/exceptions-hierarchy.git",
             "reference": "846b8592c8b673818569bbb103016723130bbf98"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/jaroslavtyc/granam-exceptions-hierarchy/zipball/846b8592c8b673818569bbb103016723130bbf98",
+            "url": "https://api.github.com/repos/granam/exceptions-hierarchy/zipball/846b8592c8b673818569bbb103016723130bbf98",
             "reference": "846b8592c8b673818569bbb103016723130bbf98",
             "shasum": ""
         },
@@ -249,17 +249,62 @@
         ]
     },
     {
+        "name": "granam/git",
+        "version": "1.1.4",
+        "version_normalized": "1.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/granam/git.git",
+            "reference": "5de5573b3920bdcfc7a5ff9bbb77d970bad8a610"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/granam/git/zipball/5de5573b3920bdcfc7a5ff9bbb77d970bad8a610",
+            "reference": "5de5573b3920bdcfc7a5ff9bbb77d970bad8a610",
+            "shasum": ""
+        },
+        "require": {
+            "granam/strict-object": "^3.0",
+            "php": ">=7.1"
+        },
+        "require-dev": {
+            "granam/exceptions-hierarchy": "^4.0",
+            "phpunit/phpunit": "^7.3"
+        },
+        "time": "2019-01-17T14:48:34+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Granam\\": "Granam/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Basic workflow with GIT",
+        "keywords": [
+            "branch",
+            "checkout",
+            "clone",
+            "git",
+            "tag",
+            "versions"
+        ]
+    },
+    {
         "name": "granam/scalar",
         "version": "4.1.0",
         "version_normalized": "4.1.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/jaroslavtyc/granam-scalar.git",
+            "url": "https://github.com/granam/scalar.git",
             "reference": "c3f78968da6a24ca24b4bb3a2729e61287df7ae3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/jaroslavtyc/granam-scalar/zipball/c3f78968da6a24ca24b4bb3a2729e61287df7ae3",
+            "url": "https://api.github.com/repos/granam/scalar/zipball/c3f78968da6a24ca24b4bb3a2729e61287df7ae3",
             "reference": "c3f78968da6a24ca24b4bb3a2729e61287df7ae3",
             "shasum": ""
         },
@@ -305,12 +350,12 @@
         "version_normalized": "3.0.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/jaroslavtyc/granam-strict-object.git",
+            "url": "https://github.com/granam/strict-object.git",
             "reference": "58456d294ac6671316f0a688a682f85467c7a37b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/jaroslavtyc/granam-strict-object/zipball/58456d294ac6671316f0a688a682f85467c7a37b",
+            "url": "https://api.github.com/repos/granam/strict-object/zipball/58456d294ac6671316f0a688a682f85467c7a37b",
             "reference": "58456d294ac6671316f0a688a682f85467c7a37b",
             "shasum": ""
         },
@@ -358,12 +403,12 @@
         "version_normalized": "3.2.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/granam/granam-string.git",
+            "url": "https://github.com/granam/string.git",
             "reference": "39d5caa02260757c8c0154ecda144a8bc699255e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/granam/granam-string/zipball/39d5caa02260757c8c0154ecda144a8bc699255e",
+            "url": "https://api.github.com/repos/granam/string/zipball/39d5caa02260757c8c0154ecda144a8bc699255e",
             "reference": "39d5caa02260757c8c0154ecda144a8bc699255e",
             "shasum": ""
         },
@@ -418,12 +463,12 @@
         "version_normalized": "3.0.3.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/jaroslavtyc/granam-tools.git",
+            "url": "https://github.com/granam/tools.git",
             "reference": "281a08cf7e7d7665b20855f002a7b9180e94c86a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/jaroslavtyc/granam-tools/zipball/281a08cf7e7d7665b20855f002a7b9180e94c86a",
+            "url": "https://api.github.com/repos/granam/tools/zipball/281a08cf7e7d7665b20855f002a7b9180e94c86a",
             "reference": "281a08cf7e7d7665b20855f002a7b9180e94c86a",
             "shasum": ""
         },
@@ -463,6 +508,108 @@
             "object",
             "php",
             "string"
+        ]
+    },
+    {
+        "name": "granam/web-content-builder",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/granam/web-content-builder.git",
+            "reference": "7170bd6c73893490059d8735885620b6ae876638"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/granam/web-content-builder/zipball/7170bd6c73893490059d8735885620b6ae876638",
+            "reference": "7170bd6c73893490059d8735885620b6ae876638",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.1",
+            "erusev/parsedown": "^1.7",
+            "ext-dom": "*",
+            "ext-json": "*",
+            "granam/strict-object": "^3.0",
+            "granam/string": "^3.2",
+            "php": ">=7.1",
+            "phpgt/dom": "^1.1",
+            "piwik/device-detector": "^3.11"
+        },
+        "require-dev": {
+            "composer/composer": "^1.7",
+            "granam/exceptions-hierarchy": "^4.0",
+            "mockery/mockery": "^1.2",
+            "phpunit/phpunit": "~7.0",
+            "roave/security-advisories": "dev-master"
+        },
+        "time": "2019-01-17T12:41:16+00:00",
+        "bin": [
+            "bin/assets"
+        ],
+        "type": "composer-plugin",
+        "extra": {
+            "class": "Granam\\WebContentBuilder\\WebContentBuilderInjectorComposerPlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Granam\\": "Granam/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Builds HTML from HTML files, markdown or PHP script",
+        "keywords": [
+            "builder",
+            "content",
+            "html",
+            "web"
+        ]
+    },
+    {
+        "name": "granam/yaml-reader",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/granam/yaml-reader.git",
+            "reference": "bd5821b77051971825d870fbaeb164f2dec6c8f1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/granam/yaml-reader/zipball/bd5821b77051971825d870fbaeb164f2dec6c8f1",
+            "reference": "bd5821b77051971825d870fbaeb164f2dec6c8f1",
+            "shasum": ""
+        },
+        "require": {
+            "ext-yaml": "*",
+            "granam/strict-object": "^3.0",
+            "php": ">=7.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~7.0",
+            "roave/security-advisories": "dev-master"
+        },
+        "time": "2019-01-03T14:21:02+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Granam\\": "Granam/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Just parse YAML content to array",
+        "keywords": [
+            "content",
+            "reader",
+            "yaml"
         ]
     },
     {
@@ -1426,17 +1573,17 @@
     },
     {
         "name": "phpunit/phpunit",
-        "version": "7.5.1",
-        "version_normalized": "7.5.1.0",
+        "version": "7.5.2",
+        "version_normalized": "7.5.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/phpunit.git",
-            "reference": "c23d78776ad415d5506e0679723cb461d71f488f"
+            "reference": "7c89093bd00f7d5ddf0ab81dee04f801416b4944"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c23d78776ad415d5506e0679723cb461d71f488f",
-            "reference": "c23d78776ad415d5506e0679723cb461d71f488f",
+            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7c89093bd00f7d5ddf0ab81dee04f801416b4944",
+            "reference": "7c89093bd00f7d5ddf0ab81dee04f801416b4944",
             "shasum": ""
         },
         "require": {
@@ -1475,7 +1622,7 @@
             "ext-xdebug": "*",
             "phpunit/php-invoker": "^2.0"
         },
-        "time": "2018-12-12T07:20:32+00:00",
+        "time": "2019-01-15T08:19:08+00:00",
         "bin": [
             "phpunit"
         ],
@@ -1574,12 +1721,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Roave/SecurityAdvisories.git",
-            "reference": "5f3e0c82ada2d16fdd637b24e095888f4abac43f"
+            "reference": "d155baccb43ba2542941fbcba258b85ce7786419"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/5f3e0c82ada2d16fdd637b24e095888f4abac43f",
-            "reference": "5f3e0c82ada2d16fdd637b24e095888f4abac43f",
+            "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/d155baccb43ba2542941fbcba258b85ce7786419",
+            "reference": "d155baccb43ba2542941fbcba258b85ce7786419",
             "shasum": ""
         },
         "conflict": {
@@ -1588,6 +1735,7 @@
             "alterphp/easyadmin-extension-bundle": ">=1.2,<1.2.11|>=1.3,<1.3.1",
             "amphp/artax": "<1.0.6|>=2,<2.0.6",
             "amphp/http": "<1.0.1",
+            "api-platform/core": ">=2.2,<2.2.10|>=2.3,<2.3.6",
             "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
             "aws/aws-sdk-php": ">=3,<3.2.1",
             "brightlocal/phpwhois": "<=4.2.5",
@@ -1616,7 +1764,6 @@
             "drupal/core": ">=7,<7.60|>=8,<8.5.8|>=8.6,<8.6.2",
             "drupal/drupal": ">=7,<7.60|>=8,<8.5.8|>=8.6,<8.6.2",
             "erusev/parsedown": "<1.7",
-            "ezsystems/ezplatform": "<1.7.8.1|>=1.8,<1.13.4.1|>=2,<2.2.3.1|>=2.3,<2.3.2.1",
             "ezsystems/ezpublish-kernel": ">=5.3,<5.3.12.1|>=5.4,<5.4.13.1|>=6,<6.7.9.1|>=6.8,<6.13.5.1|>=7,<7.2.4.1|>=7.3,<7.3.2.1",
             "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.6|>=5.4,<5.4.12.3|>=2011,<2017.12.4.3|>=2018.6,<2018.6.1.4|>=2018.9,<2018.9.1.3",
             "ezsystems/repository-forms": ">=2.3,<2.3.2.1",
@@ -1657,6 +1804,7 @@
             "pagarme/pagarme-php": ">=0,<3",
             "paragonie/random_compat": "<2",
             "paypal/merchant-sdk-php": "<3.12",
+            "pear/archive_tar": "<1.4.4",
             "phpmailer/phpmailer": ">=5,<5.2.27|>=6,<6.0.6",
             "phpoffice/phpexcel": "<=1.8.1",
             "phpoffice/phpspreadsheet": "<=1.5",
@@ -1711,7 +1859,7 @@
             "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
             "tecnickcom/tcpdf": "<6.2.22",
             "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-            "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
+            "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
             "theonedemon/phpwhois": "<=4.2.5",
             "titon/framework": ">=0,<9.9.99",
             "truckersmp/phpwhois": "<=4.3.1",
@@ -1756,7 +1904,7 @@
             "zfcampus/zf-apigility-doctrine": ">=1,<1.0.3",
             "zfr/zfr-oauth2-server-module": "<0.1.2"
         },
-        "time": "2018-12-30T13:00:21+00:00",
+        "time": "2019-01-15T19:39:37+00:00",
         "type": "metapackage",
         "notification-url": "https://packagist.org/downloads/",
         "license": [

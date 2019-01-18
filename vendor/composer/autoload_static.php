@@ -75,15 +75,19 @@ class ComposerStaticInit4cd9897a8cfcef3ca4824da6be280fa9
         'Granam\\' => 
         array (
             0 => __DIR__ . '/..' . '/granam/exceptions-hierarchy/Granam',
-            1 => __DIR__ . '/..' . '/granam/scalar/Granam',
-            2 => __DIR__ . '/..' . '/granam/strict-object/Granam',
-            3 => __DIR__ . '/..' . '/granam/string/Granam',
-            4 => __DIR__ . '/..' . '/granam/tools/Granam',
+            1 => __DIR__ . '/..' . '/granam/git/Granam',
+            2 => __DIR__ . '/..' . '/granam/scalar/Granam',
+            3 => __DIR__ . '/..' . '/granam/strict-object/Granam',
+            4 => __DIR__ . '/..' . '/granam/string/Granam',
+            5 => __DIR__ . '/..' . '/granam/tools/Granam',
+            6 => __DIR__ . '/..' . '/granam/web-content-builder/Granam',
+            7 => __DIR__ . '/..' . '/granam/yaml-reader/Granam',
         ),
         'DrdPlus\\' => 
         array (
             0 => __DIR__ . '/../..' . '/DrdPlus',
             1 => __DIR__ . '/..' . '/drdplus/rules-skeleton/DrdPlus',
+            2 => __DIR__ . '/..' . '/drdplus/web-versions/DrdPlus',
         ),
         'Doctrine\\Instantiator\\' => 
         array (

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace DrdPlus\RulesSkeleton;
 
-use DrdPlus\RulesSkeleton\Web\Content;
+use DrdPlus\RulesSkeleton\Web\RulesContent;
 use Granam\Strict\Object\StrictObject;
 
 class RulesController extends StrictObject
@@ -14,7 +14,7 @@ class RulesController extends StrictObject
     private $configuration;
     /** @var array */
     private $bodyClasses;
-    /** @var Content */
+    /** @var RulesContent */
     private $content;
     /** @var Redirect */
     private $redirect;
@@ -53,84 +53,73 @@ class RulesController extends StrictObject
         return $this->servicesContainer->getRequest()->getValue(Request::UPDATE) === 'web';
     }
 
-    public function updateWebVersion(): int
+    public function updateCode(): string
     {
-        $updatedVersions = 0;
-        // sadly we do not know which version has been updated, so we will update all of them
-        foreach ($this->servicesContainer->getWebVersions()->getAllMinorVersions() as $version) {
-            $this->servicesContainer->getWebVersions()->update($version);
-            $updatedVersions++;
-        }
-
-        return $updatedVersions;
+        return \implode(
+            "\n",
+            $this->servicesContainer->getGit()->update($this->servicesContainer->getDirs()->getProjectRoot())
+        );
     }
 
     public function persistCurrentVersion(): bool
     {
         return $this->servicesContainer->getCookiesService()->setMinorVersionCookie(
-            $this->servicesContainer->getWebVersions()->getCurrentMinorVersion()
+            $this->servicesContainer->getCurrentWebVersion()->getCurrentMinorVersion()
         );
     }
 
-    /**
-     * @return Content
-     */
-    public function getContent(): Content
+    public function getRulesContent(): RulesContent
     {
         if ($this->content) {
             return $this->content;
         }
         $servicesContainer = $this->servicesContainer;
         if ($servicesContainer->getRequest()->areRequestedTables()) {
-            $this->content = new Content(
-                $servicesContainer->getHtmlHelper(),
-                $servicesContainer->getWebVersions(),
-                $servicesContainer->getHeadForTables(),
+            $this->content = new RulesContent(
+                $servicesContainer->getRulesTablesWebContent(),
                 $servicesContainer->getMenu(),
-                $servicesContainer->getTablesBody(),
+                $servicesContainer->getCurrentWebVersion(),
                 $servicesContainer->getTablesWebCache(),
-                Content::TABLES,
+                $servicesContainer->getHtmlHelper(),
+                RulesContent::TABLES,
                 $this->getRedirect()
             );
 
             return $this->content;
         }
         if ($servicesContainer->getRequest()->isRequestedPdf() && $servicesContainer->getPdfBody()->getPdfFile()) {
-            $this->content = new Content(
-                $servicesContainer->getHtmlHelper(),
-                $servicesContainer->getWebVersions(),
-                $servicesContainer->getEmptyHead(),
+            $this->content = new RulesContent(
+                $servicesContainer->getRulesPdfWebContent(),
                 $servicesContainer->getEmptyMenu(),
-                $servicesContainer->getPdfBody(),
-                $servicesContainer->getEmptyWebCache(),
-                Content::PDF,
+                $servicesContainer->getCurrentWebVersion(),
+                $servicesContainer->getDummyWebCache(),
+                $servicesContainer->getHtmlHelper(),
+                RulesContent::PDF,
                 $this->getRedirect()
             );
 
             return $this->content;
         }
         if (!$this->canPassIn()) {
-            $this->content = new Content(
-                $servicesContainer->getHtmlHelper(),
-                $servicesContainer->getWebVersions(),
-                $servicesContainer->getHead(),
+            $this->content = new RulesContent(
+                $servicesContainer->getRulesPassWebContent(),
                 $servicesContainer->getMenu(),
-                $servicesContainer->getPassBody(),
+                $servicesContainer->getCurrentWebVersion(),
                 $servicesContainer->getPassWebCache(),
-                Content::PASS,
+                $servicesContainer->getHtmlHelper(),
+                RulesContent::PASS,
                 $this->getRedirect()
             );
 
             return $this->content;
         }
-        $this->content = new Content(
-            $servicesContainer->getHtmlHelper(),
-            $servicesContainer->getWebVersions(),
-            $servicesContainer->getHead(),
+        $this->content = new RulesContent(
+            $servicesContainer->getRulesWebContent(),
             $servicesContainer->getMenu(),
-            $servicesContainer->getBody(),
+            $servicesContainer->getCurrentWebVersion(),
             $servicesContainer->getWebCache(),
-            Content::FULL,
+            $servicesContainer->getHtmlHelper(),
+            RulesContent::FULL,
             $this->getRedirect()
         );
 
@@ -157,6 +146,7 @@ class RulesController extends StrictObject
                     $canPassIn = $usagePolicy->isVisitorUsingValidTrial();
                     if (!$canPassIn) {
                         if ($this->servicesContainer->getRequest()->getValueFromPost(Request::CONFIRM)) {
+                            /** @noinspection PhpUnhandledExceptionInspection */
                             $canPassIn = $usagePolicy->confirmOwnershipOfVisitor(new \DateTime('+1 year'));
                         }
                         if (!$canPassIn && $this->servicesContainer->getRequest()->getValue(Request::TRIAL)) {
@@ -170,9 +160,9 @@ class RulesController extends StrictObject
         return $this->canPassIn = $canPassIn;
     }
 
-    private function activateTrial(\DateTime $now): bool
+    private function activateTrial(\DateTimeImmutable $now): bool
     {
-        $trialExpiration = (clone $now)->modify('+4 minutes');
+        $trialExpiration = $now->modify('+4 minutes');
         $visitorCanAccessContent = $this->servicesContainer->getUsagePolicy()->activateTrial($trialExpiration);
         if ($visitorCanAccessContent) {
             $at = $trialExpiration->getTimestamp() + 1; // one second "insurance" overlap
@@ -193,13 +183,13 @@ class RulesController extends StrictObject
 
     public function sendCustomHeaders(): void
     {
-        if ($this->getContent()->containsTables()) {
+        if ($this->getRulesContent()->containsTables()) {
             if (\PHP_SAPI === 'cli') {
                 return;
             }
             // anyone can show content of this page
-            \header('Access-Control-Allow-Origin: *', true);
-        } elseif ($this->getContent()->containsPdf()) {
+            \header('Access-Control-Allow-Origin: *');
+        } elseif ($this->getRulesContent()->containsPdf()) {
             $pdfFile = $this->servicesContainer->getPdfBody()->getPdfFile();
             $pdfFileBasename = \basename($pdfFile);
             if (\PHP_SAPI === 'cli') {
