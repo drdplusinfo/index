@@ -1,12 +1,11 @@
 web:
   last_stable_version: 'master'
   protected_access: false
-  repository_url: git@bitbucket.org:drdplusinfo/index-web.git
-  eshop_url: https://obchod.altar.cz/
+  eshop_url: 'https://obchod.altar.cz/'
   menu_position_fixed: true
   show_home_button: false
-  name: DrD+ pravidla a odkazy
+  name: 'DrD+ pravidla a odkazy'
   title_smiley: 📚
   show_debug_contacts: false
 google:
-  analytics_id: UA-121206931-1
+  analytics_id: 'UA-121206931-1'

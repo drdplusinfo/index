@@ -12,7 +12,6 @@ has_table_of_contents: false
 has_headings: false
 has_local_links: false
 some_expected_table_ids: []
-block_names_to_expected_content: []
 expected_web_name: 'DrD+ pravidla a odkazy'
 expected_page_title: '📚 DrD+ pravidla a odkazy'
 expected_google_analytics_id: 'UA-121206931-1'
