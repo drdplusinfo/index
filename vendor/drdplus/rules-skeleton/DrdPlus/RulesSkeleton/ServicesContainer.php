@@ -7,13 +7,15 @@ use DeviceDetector\Parser\Bot;
 use DrdPlus\RulesSkeleton\Web\DebugContactsBody;
 use DrdPlus\RulesSkeleton\Web\EmptyMenu;
 use DrdPlus\RulesSkeleton\Web\Head;
-use DrdPlus\RulesSkeleton\Web\MainContent;
 use DrdPlus\RulesSkeleton\Web\Menu;
 use DrdPlus\RulesSkeleton\Web\Pass;
 use DrdPlus\RulesSkeleton\Web\PassBody;
+use DrdPlus\RulesSkeleton\Web\PassContent;
 use DrdPlus\RulesSkeleton\Web\PdfBody;
+use DrdPlus\RulesSkeleton\Web\RulesMainBody;
 use DrdPlus\RulesSkeleton\Web\RulesMainContent;
 use DrdPlus\RulesSkeleton\Web\TablesBody;
+use DrdPlus\RulesSkeleton\Web\TablesContent;
 use DrdPlus\RulesSkeleton\Web\WebFiles;
 use DrdPlus\WebVersions\WebVersions;
 use Granam\Git\Git;
@@ -44,7 +46,7 @@ class ServicesContainer extends StrictObject
     /** @var Menu */
     protected $menu;
     /** @var Body */
-    protected $body;
+    protected $rulesMainBody;
     /** @var TablesBody */
     protected $tablesBody;
     /** @var Cache */
@@ -60,13 +62,13 @@ class ServicesContainer extends StrictObject
     /** @var Bot */
     protected $botParser;
     /** @var RulesMainContent */
-    protected $rulesWebContent;
+    protected $rulesMainContent;
     /** @var RulesMainContent */
-    protected $rulesTablesWebContent;
+    protected $tablesMainContent;
     /** @var HtmlContentInterface */
     protected $rulesPdfWebContent;
     /** @var RulesMainContent */
-    protected $rulesPassWebContent;
+    protected $passContent;
     /** @var CookiesService */
     private $cookiesService;
     /** @var \DateTimeImmutable */
@@ -146,35 +148,33 @@ class ServicesContainer extends StrictObject
         return $this->botParser;
     }
 
-    public function getRulesWebContent(): RulesMainContent
+    public function getRulesMainContent(): RulesMainContent
     {
-        if ($this->rulesWebContent === null) {
-            $this->rulesWebContent = new RulesMainContent(
-                $this->getConfiguration(),
+        if ($this->rulesMainContent === null) {
+            $this->rulesMainContent = new RulesMainContent(
                 $this->getHtmlHelper(),
                 $this->getHead(),
-                $this->getBody(),
-                $this->getDebugContactsBody()
+                $this->getRulesMainBody()
             );
         }
 
-        return $this->rulesWebContent;
+        return $this->rulesMainContent;
     }
 
-    public function getRulesTablesWebContent(): MainContent
+    public function getTablesContent(): TablesContent
     {
-        if ($this->rulesTablesWebContent === null) {
-            $this->rulesTablesWebContent = new MainContent(
+        if ($this->tablesMainContent === null) {
+            $this->tablesMainContent = new TablesContent(
                 $this->getHtmlHelper(),
                 $this->getHeadForTables(),
                 $this->getTablesBody()
             );
         }
 
-        return $this->rulesTablesWebContent;
+        return $this->tablesMainContent;
     }
 
-    public function getRulesPdfWebContent(): HtmlContentInterface
+    public function getPdfContent(): PdfContent
     {
         if ($this->rulesPdfWebContent === null) {
             $this->rulesPdfWebContent = new PdfContent($this->getPdfBody());
@@ -183,17 +183,17 @@ class ServicesContainer extends StrictObject
         return $this->rulesPdfWebContent;
     }
 
-    public function getRulesPassWebContent(): MainContent
+    public function getPassContent(): PassContent
     {
-        if ($this->rulesPassWebContent === null) {
-            $this->rulesPassWebContent = new MainContent(
+        if ($this->passContent === null) {
+            $this->passContent = new PassContent(
                 $this->getHtmlHelper(),
                 $this->getHead(),
                 $this->getPassBody()
             );
         }
 
-        return $this->rulesPassWebContent;
+        return $this->passContent;
     }
 
     public function getHtmlHelper(): HtmlHelper
@@ -234,13 +234,13 @@ class ServicesContainer extends StrictObject
         return $this->head;
     }
 
-    public function getBody(): Body
+    public function getRulesMainBody(): RulesMainBody
     {
-        if ($this->body === null) {
-            $this->body = new Body($this->getWebFiles());
+        if ($this->rulesMainBody === null) {
+            $this->rulesMainBody = new RulesMainBody($this->getWebFiles(), $this->getDebugContactsBody());
         }
 
-        return $this->body;
+        return $this->rulesMainBody;
     }
 
     public function getHeadForTables(): Head
@@ -257,7 +257,7 @@ class ServicesContainer extends StrictObject
     public function getTablesBody(): TablesBody
     {
         if ($this->tablesBody === null) {
-            $this->tablesBody = new TablesBody($this->getWebFiles(), $this->getHtmlHelper(), $this->getRequest());
+            $this->tablesBody = new TablesBody($this->getRulesMainBody(), $this->getHtmlHelper(), $this->getRequest());
         }
 
         return $this->tablesBody;

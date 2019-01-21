@@ -8,11 +8,17 @@
     "packages": [
         {
             "name": "drdplus/rules-skeleton",
-            "version": "1.1.6",
+            "version": "1.1.10",
             "source": {
                 "type": "git",
-                "url": "/var/www/rules.skeleton",
-                "reference": "1b6ffee2490d78b962663262d7e6882f3e943c56"
+                "url": "https://github.com/drdplusinfo/rules-skeleton.git",
+                "reference": "d31da30423ed965c75d2d0856b96d1dd7e178d1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/d31da30423ed965c75d2d0856b96d1dd7e178d1d",
+                "reference": "d31da30423ed965c75d2d0856b96d1dd7e178d1d",
+                "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0",
@@ -52,25 +58,18 @@
                     "DrdPlus\\": "DrdPlus/"
                 }
             },
-            "scripts": {
-                "post-update-cmd": [
-                    "php vendor/bin/assets --css --dir=css"
-                ],
-                "post-install-cmd": [
-                    "php vendor/bin/assets --css --dir=css"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Skeleton for DrD+ rules as HTML",
             "keywords": [
+                "Skeleton",
                 "drd plus",
                 "helper",
-                "rules",
-                "skeleton"
+                "rules"
             ],
-            "time": "2019-01-18T07:36:03+00:00"
+            "time": "2019-01-21T11:55:36+00:00"
         },
         {
             "name": "drdplus/web-versions",

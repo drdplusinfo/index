@@ -5,7 +5,7 @@ web:
   menu_position_fixed: true
   show_home_button: false
   name: 'DrD+ pravidla a odkazy'
-  title_smiley: 📚
+  title_smiley: '📚'
   show_debug_contacts: false
 google:
   analytics_id: 'UA-121206931-1'

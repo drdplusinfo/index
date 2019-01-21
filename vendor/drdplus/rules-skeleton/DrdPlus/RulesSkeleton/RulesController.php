@@ -76,11 +76,10 @@ class RulesController extends StrictObject
         $servicesContainer = $this->servicesContainer;
         if ($servicesContainer->getRequest()->areRequestedTables()) {
             $this->content = new RulesContent(
-                $servicesContainer->getRulesTablesWebContent(),
+                $servicesContainer->getTablesContent(),
                 $servicesContainer->getMenu(),
                 $servicesContainer->getCurrentWebVersion(),
                 $servicesContainer->getTablesWebCache(),
-                $servicesContainer->getHtmlHelper(),
                 RulesContent::TABLES,
                 $this->getRedirect()
             );
@@ -89,11 +88,10 @@ class RulesController extends StrictObject
         }
         if ($servicesContainer->getRequest()->isRequestedPdf() && $servicesContainer->getPdfBody()->getPdfFile()) {
             $this->content = new RulesContent(
-                $servicesContainer->getRulesPdfWebContent(),
+                $servicesContainer->getPdfContent(),
                 $servicesContainer->getEmptyMenu(),
                 $servicesContainer->getCurrentWebVersion(),
                 $servicesContainer->getDummyWebCache(),
-                $servicesContainer->getHtmlHelper(),
                 RulesContent::PDF,
                 $this->getRedirect()
             );
@@ -102,11 +100,10 @@ class RulesController extends StrictObject
         }
         if (!$this->canPassIn()) {
             $this->content = new RulesContent(
-                $servicesContainer->getRulesPassWebContent(),
+                $servicesContainer->getPassContent(),
                 $servicesContainer->getMenu(),
                 $servicesContainer->getCurrentWebVersion(),
                 $servicesContainer->getPassWebCache(),
-                $servicesContainer->getHtmlHelper(),
                 RulesContent::PASS,
                 $this->getRedirect()
             );
@@ -114,11 +111,10 @@ class RulesController extends StrictObject
             return $this->content;
         }
         $this->content = new RulesContent(
-            $servicesContainer->getRulesWebContent(),
+            $servicesContainer->getRulesMainContent(),
             $servicesContainer->getMenu(),
             $servicesContainer->getCurrentWebVersion(),
             $servicesContainer->getWebCache(),
-            $servicesContainer->getHtmlHelper(),
             RulesContent::FULL,
             $this->getRedirect()
         );
