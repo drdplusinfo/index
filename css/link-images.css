@@ -266,6 +266,22 @@
     background-image: url(/images/pj-craft-color.png?version=63231f7831a9a5256e4939f9becfa7b7);
 }
 
+.goblinu-2k6 {
+    background-image: url(/images/2k6-goblinu-monochrome.png?version=194ce4e73f2f91bd218126ac1054572e);
+}
+
+.goblinu-2k6:hover {
+    background-image: url(/images/2k6-goblinu-color.png?version=45c24460dfce7aa5725a4bb916a983f3);
+}
+
+.koncina {
+    background-image: url(/images/koncina-monochrome.png?version=fb96ade236fcaf4f48dbecb4379b343e);
+}
+
+.koncina:hover {
+    background-image: url(/images/koncina-color.png?version=d9a70fce6a8e2860cbc2b8c2b7bf703a);
+}
+
 .theurg-calculator {
     background-image: url(/images/theurg-calculator-monochrome-small.png?version=fa0b717725d9b18298370b2fbd785589);
 }
