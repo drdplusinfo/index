@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
  * @return {Promise<{string}>}
  */
 async function getLastArticleDate() {
-    const lastArticleDateJson = await httpGet('http://blog.drdplus.loc/last_article_date.php');
+    const lastArticleDateJson = await httpGet('https://blog.drdplus.info/last_article_date.php');
     return lastArticleDateJson['last_article_date'];
 }
 
