@@ -282,6 +282,30 @@
     background-image: url(/images/koncina-color.png?version=d9a70fce6a8e2860cbc2b8c2b7bf703a);
 }
 
+.pribehy-imperia {
+    background-image: url(/images/pribehy-imperia-monochrome.png);
+}
+
+.pribehy-imperia:hover {
+    background-image: url(/images/pribehy-imperia-color.png);
+}
+
+.strepy-snu {
+    background-image: url(/images/strepy-snu-monochrome.png);
+}
+
+.strepy-snu:hover {
+    background-image: url(/images/strepy-snu-color.png);
+}
+
+.fantazeen {
+    background-image: url(/images/fantazeen-monochrome.png);
+}
+
+.fantazeen:hover {
+    background-image: url(/images/fantazeen-color.png);
+}
+
 .theurg-calculator {
     background-image: url(/images/theurg-calculator-monochrome-small.png?version=fa0b717725d9b18298370b2fbd785589);
 }
