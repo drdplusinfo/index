@@ -138,6 +138,9 @@
 .altar {
     background-image: url(/images/altar-monochrome.png?version=743ce55ced9430e591e9bbd0e69fdee0);
     color: black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .altar:hover {
@@ -147,6 +150,9 @@
 .neviditelna-kniha {
     background-image: url(/images/neviditelna-kniha-monochrome.png?version=58964963922df4c0d4312468daceeacf);
     color: black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .neviditelna-kniha:hover {
@@ -236,6 +242,9 @@
 .d20 {
     background-image: url(/images/d20-monochrome.png?version=dc5a9394685518d4fd5d237cd8ad3185);
     color: black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .d20:hover {
@@ -300,6 +309,9 @@
 
 .fantazeen {
     background-image: url(/images/fantazeen-monochrome.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .fantazeen:hover {
