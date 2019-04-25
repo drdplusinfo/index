@@ -136,7 +136,7 @@
 }
 
 .altar {
-    background-image: url(/images/altar-monochrome.png?version=743ce55ced9430e591e9bbd0e69fdee0);
+    background-image: url(/images/altar-monochrome.png?version=3ebd4660acca2afef0bf19b46504b5b1);
     color: black;
     background-size: contain;
     background-position: center;
@@ -144,7 +144,7 @@
 }
 
 .altar:hover {
-    background-image: url(/images/altar-color.png?version=babbc206f1d07a29077c787e5a35be2f);
+    background-image: url(/images/altar-color.png?version=ec73cf493ed1282156c1ed8751d72c71);
 }
 
 .neviditelna-kniha {
@@ -284,38 +284,38 @@
 }
 
 .koncina {
-    background-image: url(/images/koncina-monochrome.png?version=fb96ade236fcaf4f48dbecb4379b343e);
+    background-image: url(/images/koncina-monochrome.png?version=4360d3fbf3c55f2255d0d8d7c78614b1);
 }
 
 .koncina:hover {
-    background-image: url(/images/koncina-color.png?version=d9a70fce6a8e2860cbc2b8c2b7bf703a);
+    background-image: url(/images/koncina-color.png?version=5b346e8d8001f9427388e014923d3d2d);
 }
 
 .pribehy-imperia {
-    background-image: url(/images/pribehy-imperia-monochrome.png);
+    background-image: url(/images/pribehy-imperia-monochrome.png?version=31e1ab631acfee535c0bf2311884347d);
 }
 
 .pribehy-imperia:hover {
-    background-image: url(/images/pribehy-imperia-color.png);
+    background-image: url(/images/pribehy-imperia-color.png?version=6e223c7971be1e72525f7f0fc3cee05d);
 }
 
 .strepy-snu {
-    background-image: url(/images/strepy-snu-monochrome.png);
+    background-image: url(/images/strepy-snu-monochrome.png?version=231eca7c84266f0ffef2c6be01011f81);
 }
 
 .strepy-snu:hover {
-    background-image: url(/images/strepy-snu-color.png);
+    background-image: url(/images/strepy-snu-color.png?version=e4c53cebdcee35df24a5030a9cdfdb23);
 }
 
 .fantazeen {
-    background-image: url(/images/fantazeen-monochrome.png);
+    background-image: url(/images/fantazeen-monochrome.png?version=f0b8293d05e5ee6c9e75a0c531f7f599);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .fantazeen:hover {
-    background-image: url(/images/fantazeen-color.png);
+    background-image: url(/images/fantazeen-color.png?version=08ae4d6df74550f1181104c8f638c5cd);
 }
 
 .theurg-calculator {
