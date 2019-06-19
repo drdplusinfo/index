@@ -318,12 +318,20 @@
     background-image: url(/images/fantazeen-color.png?version=08ae4d6df74550f1181104c8f638c5cd);
 }
 
-.theurg-calculator {
-    background-image: url(/images/theurg-calculator-monochrome-small.png?version=fa0b717725d9b18298370b2fbd785589);
+.theurg-formula-calculator {
+    background-image: url(/images/theurg-formula-calculator-monochrome-small.png?version=fa0b717725d9b18298370b2fbd785589);
 }
 
-.theurg-calculator:hover {
-    background-image: url(/images/theurg-calculator-color-small.png?version=3d28afd6ded160444df0aea525eaf456);
+.theurg-formula-calculator:hover {
+    background-image: url(/images/theurg-formula-calculator-color-small.png?version=3d28afd6ded160444df0aea525eaf456);
+}
+
+.theurg-demon-calculator {
+    background-image: url(/images/theurg-demon-calculator-monochrome-small.png?version=8ca225e024c547597100d46d5bcb474e);
+}
+
+.theurg-demon-calculator:hover {
+    background-image: url(/images/theurg-demon-calculator-color-small.png?version=85f78d9089ea1883308f1f0acf7d41dd);
 }
 
 .fight-calculator {
