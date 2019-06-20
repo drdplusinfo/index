@@ -41,6 +41,7 @@ class ComposerStaticInit4cd9897a8cfcef3ca4824da6be280fa9
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'Psr\\Container\\' => 14,
             'Prophecy\\' => 9,
             'PHPMailer\\PHPMailer\\' => 20,
         ),
@@ -128,6 +129,10 @@ class ComposerStaticInit4cd9897a8cfcef3ca4824da6be280fa9
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
         ),
         'Prophecy\\' => 
         array (
