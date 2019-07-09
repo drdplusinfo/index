@@ -15,11 +15,11 @@ async function getLastArticleDate() {
 }
 
 /**
- * @param {string} theUrl
+ * @param {string} url
  * @return {Promise<{object}>}
  */
-function httpGet(theUrl) {
-    const request = new Request(theUrl);
+function httpGet(url) {
+    const request = new Request(url);
     return fetch(request)
         .then(response => response.json());
 }
