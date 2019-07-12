@@ -39,6 +39,11 @@ a {
 a:hover {
     color: #ffd4a4;
     text-shadow: 0 0 3px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.contact a:hover {
+    box-shadow: none;
 }
 
 .links a:hover {
