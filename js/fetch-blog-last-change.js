@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     getLastArticleDate().then(lastArticleDate => {
-        const blogLastChange = document.getElementById('blog').getElementsByClassName('last-change')[0];
+        const blogLastChange = document.getElementById('blog').getElementsByClassName('date')[0];
         const dateOfLastChange = new Date(lastArticleDate);
         blogLastChange.textContent = dateOfLastChange.toLocaleDateString('cs');
     });

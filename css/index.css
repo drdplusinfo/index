@@ -95,13 +95,13 @@ a::first-line {
     line-height: normal;
 }
 
-.last-change {
+.date {
     font-style: italic;
     font-weight: bold;
     color: #004a00;
 }
 
-a:hover .last-change {
+a:hover .date {
     font-weight: normal;
     color: whitesmoke;
 }
