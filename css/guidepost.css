@@ -1,0 +1,122 @@
+.guidepost a {
+    border-radius: 3px;
+    text-decoration: none;
+    border-bottom: none;
+    display: block;
+    height: 8em;
+    text-align: center;
+    line-height: 8em;
+    color: black;
+    text-shadow: 0 0 3px whitesmoke, 0 0 1px white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.guidepost a:hover {
+    color: #ffd4a4;
+    text-shadow: 0 0 3px black;
+    text-decoration: none;
+    box-shadow: 0 8px 6px -6px black;
+    background-color: rgba(255, 139, 9, 0.18);
+}
+
+.guidepost .small-image {
+    background-size: contain;
+}
+
+.guidepost a.navrh {
+    display: inherit;
+    height: inherit;
+    line-height: inherit;
+}
+
+.guidepost a.navrh:hover {
+    background-color: rgba(32, 30, 28, 0.47);
+    border-radius: 3px;
+}
+
+.guidepost .links a:hover {
+    color: #ffd4a4;
+    text-shadow: 0 0 3px black;
+}
+
+.guidepost a.external-url {
+    text-decoration: none;
+    border: none;
+}
+
+.guidepost a.external-url:hover {
+    color: #ffd4a4;
+    text-shadow: 0 0 3px black;
+    text-decoration: none;
+}
+
+.guidepost a::first-line {
+    vertical-align: middle; /* for anchor */
+}
+
+.guidepost .links .link {
+    height: initial;
+    line-height: initial;
+    margin: auto;
+    display: block;
+    font-size: 90%;
+}
+
+@media (max-width: 991px) {
+    .guidepost .links .link {
+        line-height: 0.95;
+    }
+}
+
+@media (max-width: 767px) {
+    .guidepost .links .link {
+        line-height: 1.2;
+    }
+}
+
+.guidepost .name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.guidepost .date {
+    font-style: italic;
+    font-weight: bold;
+    color: #004a00;
+}
+
+.guidepost a:hover .date {
+    font-weight: normal;
+    color: whitesmoke;
+}
+
+.guidepost .lock {
+    width: 32px;
+    height: 32px;
+    vertical-align: bottom;
+}
+
+.guidepost .percents {
+    font-style: italic;
+    color: orangered;
+    opacity: .8;
+}
+
+.guidepost .handbook {
+    background-size: cover;
+}
+
+.guidepost .forum {
+    font-style: italic;
+}
+
+.guidepost .character-sheet {
+    font-style: italic;
+}
+
+.guidepost .small-image {
+    background-position: center;
+    background-size: contain;
+}

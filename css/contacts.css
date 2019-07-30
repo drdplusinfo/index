@@ -1,3 +1,7 @@
 .contacts {
     font-size: 16px;
 }
+
+.contact a:hover {
+    box-shadow: none;
+}

@@ -1,0 +1,27 @@
+article .article-image {
+    max-height: 260px;
+    min-height: 220px;
+    display: block;
+    float: left;
+    padding: 0 1em 0 0;
+    height: 30vw;
+}
+
+article hr {
+    margin: 1em 0;
+}
+
+article .note {
+    text-align: right;
+}
+
+article p {
+    margin: 1em 0 0 0;
+}
+
+article .small-image {
+    width: auto;
+    height: auto;
+    max-height: initial;
+    min-height: initial;
+}
