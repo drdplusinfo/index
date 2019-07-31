@@ -25,3 +25,9 @@ article .small-image {
     max-height: initial;
     min-height: initial;
 }
+
+article .big-picture {
+    margin: 0 auto;
+    display: block;
+    border-radius: 3px;
+}
