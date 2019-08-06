@@ -1,4 +1,4 @@
-expected_public_url: 'https://drdplus.info'
+expected_public_url: 'https://www.drdplus.info'
 has_tables: false
 has_authors: false
 has_protected_access: false
@@ -15,3 +15,4 @@ some_expected_table_ids: []
 expected_web_name: 'DrD+ pravidla a odkazy'
 expected_page_title: '📚 DrD+ pravidla a odkazy'
 expected_google_analytics_id: 'UA-121206931-1'
+has_external_anchors_with_hashes: false
