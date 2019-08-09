@@ -14,7 +14,7 @@ use \DrdPlus\Index\FileTools;
 
       <p>U zrodu Asterionu stáli Jiří "Jersey" Buchta a Karel Makovský, o pár let později pak tento svět
         <a href="http://www.sarden.cz/2016-10-10-0348/rozhovor-s-janem-c-galetou-nejen-o-asterionu">převzali</a> jejich
-        následovníci. A Asterion žije dodnes.</p>
+        následovníci. A Asterion žije <a href="http://asterionrpg.cz/">dodnes</a>.</p>
 
       <p>Moduly Asterionu vychází pod různými vydavatelstvími, podle aktuální situace, takže sehnat všechny může být
         trochu oříšek. První moduly vydával a stále prodává
@@ -31,8 +31,7 @@ use \DrdPlus\Index\FileTools;
       <p><i>Komu vyhovuje hotový obsah, propracované politické pozadí, barevné mapy a vůbec dobrodružství, pro které
           nemusí už nic vymýšlet, ten bude s Asterionem spokojen.</i></p>
 
-      <p>Více detailů o Asterionu se dozvíte na <a href="http://asterionrpg.cz/">Asterionrpg.cz</a> (pokud
-        zrovna nemají výpadek, řešíme to s nimi).</p>
+      <p>Více detailů o Asterionu se dozvíte na <a href="http://asterionrpg.cz/">Asterionrpg.cz</a>.</p>
 
       <h2>Pravidla DrD+ pro moduly Asterionu</h2>
       <ul>
