@@ -147,12 +147,27 @@
     background-image: url(/images/links/altar-color.png?version=ec73cf493ed1282156c1ed8751d72c71);
 }
 
+.mytago {
+    background-image: url(/images/links/mytago-monochrome.png?version=98a0b936901bc4169fddd78ed03ad431);
+    color: black;
+}
+
+.mytago:hover {
+    background-image: url(/images/links/mytago-color.png?version=fad8133194364bf5acfc063362e62b34);
+}
+
+.fantasyobchod {
+    background-image: url(/images/links/fantasy-obchod-monochrome.png?version=e37ceea5c84a3184ed621036ab8f48b0);
+    color: black;
+}
+
+.fantasyobchod:hover {
+    background-image: url(/images/links/fantasy-obchod-color.png?version=67684345c274d7d132e94d82d851846e);
+}
+
 .neviditelna-kniha {
     background-image: url(/images/links/neviditelna-kniha-monochrome.png?version=58964963922df4c0d4312468daceeacf);
     color: black;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .neviditelna-kniha:hover {
