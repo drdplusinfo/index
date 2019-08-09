@@ -119,5 +119,5 @@
 
 .guidepost .filling-image {
     background-position: center;
-    background-size: auto;
+    background-size: contain;
 }
