@@ -8,11 +8,11 @@
     "packages": [
         {
             "name": "drdplus/rules-skeleton",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "/home/jaroslav/projects/docker/drdplus/www/rules.skeleton",
-                "reference": "69e26c5f78e2ab7ba3ad287cf8df51caf477274b"
+                "reference": "6e2c4bd027d8ac3c9a97f05ef042d85b5202f96a"
             },
             "require": {
                 "composer-plugin-api": "^1.0",
@@ -78,7 +78,7 @@
                 "rules",
                 "skeleton"
             ],
-            "time": "2019-08-15T07:43:51+00:00"
+            "time": "2019-08-15T08:04:42+00:00"
         },
         {
             "name": "drdplus/web-versions",
