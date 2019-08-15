@@ -371,12 +371,12 @@
     },
     {
         "name": "drdplus/rules-skeleton",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
+        "version": "1.4.1",
+        "version_normalized": "1.4.1.0",
         "source": {
             "type": "git",
             "url": "/home/jaroslav/projects/docker/drdplus/www/rules.skeleton",
-            "reference": "90b05db160d2dee5adedcef188f3e11459e71300"
+            "reference": "69e26c5f78e2ab7ba3ad287cf8df51caf477274b"
         },
         "require": {
             "composer-plugin-api": "^1.0",
@@ -412,7 +412,7 @@
             "phpunit/phpunit": "^7.5",
             "roave/security-advisories": "dev-master"
         },
-        "time": "2019-08-14T16:13:45+00:00",
+        "time": "2019-08-15T07:43:51+00:00",
         "bin": [
             "bin/fix_web_permissions.sh"
         ],
