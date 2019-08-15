@@ -13,8 +13,8 @@ class FileToolsTest extends TestCase
      */
     public function I_can_get_human_readable_size()
     {
-        self::assertSame('1kB', FileTools::getHumanReadableSize(1025));
-        self::assertSame('1.95kB', FileTools::getHumanReadableSize(2000));
+        self::assertSame('1 kB', FileTools::getHumanReadableSize(1025));
+        self::assertSame('1.95 kB', FileTools::getHumanReadableSize(2000));
     }
 
     /**
@@ -22,6 +22,6 @@ class FileToolsTest extends TestCase
      */
     public function I_can_get_size_in_megabytes()
     {
-        self::assertSame('0.33MB', FileTools::getHumanReadableSize(345000, 2, FileTools::MEGABYTE));
+        self::assertSame('0.33 MB', FileTools::getHumanReadableSize(345000, 2, FileTools::MEGABYTE));
     }
 }
