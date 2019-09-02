@@ -1,8 +1,8 @@
-<?php
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace DrdPlus\Tests\RulesSkeleton\Web;
 
+use DrdPlus\RulesSkeleton\Request;
 use DrdPlus\Tests\RulesSkeleton\Partials\AbstractContentTest;
 use Granam\WebContentBuilder\HtmlDocument;
 
@@ -13,7 +13,7 @@ class PassContentTest extends AbstractContentTest
      */
     public function Headings_do_not_have_anchors_to_self(): void
     {
-        if (!$this->isSkeletonChecked() && !$this->getTestsConfiguration()->hasProtectedAccess()) {
+        if (!$this->getTestsConfiguration()->hasProtectedAccess()) {
             self::assertFalse(false, 'Nothing to test here');
 
             return;
@@ -37,13 +37,14 @@ class PassContentTest extends AbstractContentTest
      */
     public function Pass_does_not_reset_requested_path_and_query(): void
     {
-        if (!$this->isSkeletonChecked() && !$this->getTestsConfiguration()->hasProtectedAccess()) {
+        if (!$this->getTestsConfiguration()->hasProtectedAccess()) {
             self::assertFalse(false, 'Nothing to test here');
 
             return;
         }
         $someActionsChecked = false;
-        $localUrl = '/foo?qux=baz';
+        $expectedLocalUrl = '/foo?qux=baz';
+        $localUrl = $expectedLocalUrl . '&' . Request::TRIAL_EXPIRED_AT . '=123456';
         $url = $this->getTestsConfiguration()->getLocalUrl() . $localUrl;
         $content = $this->fetchContentFromUrl($url, true)['content'];
         self::assertNotEmpty($content, 'No content fetched from ' . $url);
@@ -54,7 +55,7 @@ class PassContentTest extends AbstractContentTest
             if (!preg_match('~^/[^/]*$~', $action)) {
                 continue; // not a local link
             }
-            self::assertSame($localUrl, $action);
+            self::assertSame($expectedLocalUrl, $action, 'Expected local URL without trial expiration parameter');
             $someActionsChecked = true;
         }
         self::assertTrue($someActionsChecked, 'No forms with a local link found on URL ' . $url);

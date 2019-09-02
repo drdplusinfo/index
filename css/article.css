@@ -31,3 +31,7 @@ article .big-picture {
     display: block;
     border-radius: 3px;
 }
+
+article h1 {
+    word-wrap: initial;
+}

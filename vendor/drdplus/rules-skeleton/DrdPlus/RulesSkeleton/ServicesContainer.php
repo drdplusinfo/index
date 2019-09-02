@@ -37,6 +37,8 @@ class ServicesContainer extends StrictObject
     private $git;
     /** @var Configuration */
     private $configuration;
+    /** @var HomepageDetector */
+    private $homepageDetector;
     /** @var HtmlHelper */
     private $htmlHelper;
     /** @var Head */
@@ -57,6 +59,8 @@ class ServicesContainer extends StrictObject
     private $pathProvider;
     /** @var Request */
     private $request;
+    /** @var Environment */
+    private $environment;
     /** @var ContentIrrelevantParametersFilter */
     private $contentIrrelevantParametersFilter;
     /** @var Bot */
@@ -101,6 +105,14 @@ class ServicesContainer extends StrictObject
         return $this->configuration;
     }
 
+    public function getHomepageDetector(): HomepageDetector
+    {
+        if ($this->homepageDetector === null) {
+            $this->homepageDetector = new HomepageDetector($this->getPathProvider());
+        }
+        return $this->homepageDetector;
+    }
+
     public function getCurrentWebVersion(): CurrentWebVersion
     {
         if ($this->currentWebVersion === null) {
@@ -124,9 +136,17 @@ class ServicesContainer extends StrictObject
     public function getRequest(): Request
     {
         if ($this->request === null) {
-            $this->request = new Request($this->getBotParser());
+            $this->request = Request::createFromGlobals($this->getBotParser(), $this->getEnvironment());
         }
         return $this->request;
+    }
+
+    public function getEnvironment(): Environment
+    {
+        if ($this->environment === null) {
+            $this->environment = Environment::createFromGlobals();
+        }
+        return $this->environment;
     }
 
     public function getGit(): Git
@@ -223,7 +243,7 @@ class ServicesContainer extends StrictObject
     public function getMenu(): Menu
     {
         if ($this->menu === null) {
-            $this->menu = new Menu($this->getConfiguration(), $this->getWebVersions(), $this->getCurrentWebVersion(), $this->getRequest());
+            $this->menu = new Menu($this->getConfiguration(), $this->getHomepageDetector());
         }
         return $this->menu;
     }
@@ -360,7 +380,7 @@ class ServicesContainer extends StrictObject
     public function getCookiesService(): CookiesService
     {
         if ($this->cookiesService === null) {
-            $this->cookiesService = new CookiesService();
+            $this->cookiesService = new CookiesService($this->getRequest());
         }
         return $this->cookiesService;
     }
@@ -446,9 +466,7 @@ class ServicesContainer extends StrictObject
     {
         return new EmptyMenu(
             $this->getConfiguration(),
-            $this->getWebVersions(),
-            $this->getCurrentWebVersion(),
-            $this->getRequest()
+            $this->getHomepageDetector()
         );
     }
 
