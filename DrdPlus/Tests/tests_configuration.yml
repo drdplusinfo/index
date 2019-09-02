@@ -11,6 +11,8 @@ has_custom_body_content: false
 has_table_of_contents: false
 has_headings: false
 has_local_links: false
+has_calculations: false
+has_marked_content: false
 some_expected_table_ids: []
 expected_web_name: 'DrD+ pravidla a odkazy'
 expected_page_title: '📚 DrD+ pravidla a odkazy'

@@ -15,11 +15,13 @@ use DrdPlus\RulesSkeleton\RulesApplication;
 use DrdPlus\RulesSkeleton\ServicesContainer;
 use DrdPlus\RulesSkeleton\UsagePolicy;
 use DrdPlus\RulesSkeleton\Web\RulesMainBody;
+use DrdPlus\Tests\RulesSkeleton\Exceptions\GlobalsAreNotBackedUp;
 use DrdPlus\Tests\RulesSkeleton\TestsConfiguration;
 use DrdPlus\WebVersions\WebVersions;
 use Granam\Git\Git;
 use Granam\String\StringTools;
 use Granam\Tests\Tools\TestWithMockery;
+use Granam\Tools\DirName;
 use Granam\WebContentBuilder\HtmlDocument;
 use Granam\WebContentBuilder\Web\HeadInterface;
 use Gt\Dom\Element;
@@ -29,10 +31,18 @@ abstract class AbstractContentTest extends TestWithMockery
 {
     use ClassesTrait;
 
+    /** @var Bot */
+    private $bot;
+    /** @var Git */
+    private $git;
     /** @var Dirs */
     private $dirs;
     /** @var Environment */
     private $environment;
+    /** @var CookiesService */
+    private $cookiesService;
+    /** @var Request */
+    private $request;
     /** @var TestsConfiguration */
     private $testsConfiguration;
     protected $needPassIn = true;
@@ -51,11 +61,13 @@ abstract class AbstractContentTest extends TestWithMockery
         }
     }
 
-    protected function getTestsConfiguration(): TestsConfiguration
+    protected function getTestsConfiguration(string $class = null): TestsConfiguration
     {
         static $testsConfiguration;
         if ($testsConfiguration === null) {
-            $testsConfiguration = TestsConfiguration::createFromYaml(\DRD_PLUS_TESTS_ROOT . '/tests_configuration.yml');
+            /** @var TestsConfiguration $class */
+            $class = $class ?? TestsConfiguration::class;
+            $testsConfiguration = $class::createFromYaml(\DRD_PLUS_TESTS_ROOT . '/tests_configuration.yml');
         }
 
         return $testsConfiguration;
@@ -63,11 +75,12 @@ abstract class AbstractContentTest extends TestWithMockery
 
     protected function passIn(): bool
     {
+        $_COOKIE[UsagePolicy::OWNERSHIP_COOKIE_NAME] = $this->getNameForLocalOwnershipConfirmation();
         $_COOKIE[$this->getNameForLocalOwnershipConfirmation()] = true; // this cookie simulates confirmation of ownership
         $usagePolicy = new UsagePolicy(
             $this->getVariablePartOfNameForPass(),
-            new Request($this->getBot(), $this->getEnvironment()),
-            new CookiesService()
+            $request = Request::createFromGlobals($this->getBot(), $this->getEnvironment()),
+            $this->createCookiesService($request)
         );
         self::assertTrue(
             $usagePolicy->hasVisitorConfirmedOwnership(),
@@ -79,22 +92,13 @@ abstract class AbstractContentTest extends TestWithMockery
         return true;
     }
 
-    protected function getBot(): Bot
-    {
-        static $bot;
-        if ($bot === null) {
-            $bot = new Bot();
-        }
-        return $bot;
-    }
-
     protected function passOut(): bool
     {
-        unset($_COOKIE[$this->getNameForLocalOwnershipConfirmation()]);
+        unset($_COOKIE[$this->getNameForLocalOwnershipConfirmation()], $_COOKIE[UsagePolicy::OWNERSHIP_COOKIE_NAME]);
         $usagePolicy = new UsagePolicy(
             $this->getVariablePartOfNameForPass(),
-            new Request($this->getBot(), $this->getEnvironment()),
-            new CookiesService()
+            $request = Request::createFromGlobals($this->getBot(), $this->getEnvironment()),
+            $this->createCookiesService($request)
         );
         self::assertFalse(
             $usagePolicy->hasVisitorConfirmedOwnership(),
@@ -151,7 +155,7 @@ abstract class AbstractContentTest extends TestWithMockery
                 $contents[$key],
                 'Nothing has been fetched with GET ' . \var_export($get, true) . ', POST ' . \var_export($post, true)
                 . ' and COOKIE ' . \var_export($cookies, true)
-                . ' from ' . DRD_PLUS_INDEX_FILE_NAME_TO_TEST
+                . ' from ' . DirName::getPathWithResolvedParents(DRD_PLUS_INDEX_FILE_NAME_TO_TEST)
             );
         }
 
@@ -251,15 +255,31 @@ abstract class AbstractContentTest extends TestWithMockery
         $_GET[Request::CACHE] = Request::DISABLE;
         \ob_start();
         /** @noinspection PhpIncludeInspection */
-        include $this->getProjectRoot() . '/index.php';
+        include DRD_PLUS_INDEX_FILE_NAME_TO_TEST;
         $content = \ob_get_clean();
         if ($backupGlobals) {
             $_GET = $originalGet;
             $_POST = $originalPost;
             $_COOKIE = $originalCookies;
+        } else {
+            $this->guardGlobalsHaveBackup();
         }
 
         return $content;
+    }
+
+    private function guardGlobalsHaveBackup()
+    {
+        if (!$this->backupGlobals) {
+            throw new GlobalsAreNotBackedUp(<<<TEXT
+Global properties should be backed up via annotation
+/**
+ * @backupGlobals enabled
+ */
+or via backupGlobals="true" directive in phpunit.xml.dist file
+TEXT
+            );
+        }
     }
 
     protected const WITH_BODY = true;
@@ -367,26 +387,6 @@ abstract class AbstractContentTest extends TestWithMockery
         return $this->configuration;
     }
 
-    /**
-     * @param array $values
-     * @param string $path
-     * @return Request|MockInterface
-     */
-    protected function createRequest(array $values = [], string $path = '/'): Request
-    {
-        $request = $this->mockery($this->getRequestClass());
-        foreach ($values as $name => $value) {
-            $request->allows('getValue')
-                ->with($name)
-                ->andReturn($value);
-        }
-        $request->allows('getPath')
-            ->andReturn($path);
-        $request->makePartial();
-
-        return $request;
-    }
-
     protected function getContentIrrelevantParametersFilter(): ContentIrrelevantParametersFilter
     {
         static $contentIrrelevantParametersFilter;
@@ -394,11 +394,6 @@ abstract class AbstractContentTest extends TestWithMockery
             $contentIrrelevantParametersFilter = $this->createServicesContainer()->getContentIrrelevantParametersFilter();
         }
         return $contentIrrelevantParametersFilter;
-    }
-
-    protected function createGit(): Git
-    {
-        return new Git();
     }
 
     /**
@@ -418,14 +413,11 @@ abstract class AbstractContentTest extends TestWithMockery
         return $customConfiguration;
     }
 
-    protected function createRulesApplication(
-        Configuration $configuration = null,
-        HtmlHelper $htmlHelper = null
-    ): RulesApplication
+    protected function createRulesApplication(ServicesContainer $servicesContainer = null)
     {
         $rulesApplicationClass = $this->getRulesApplicationClass();
 
-        return new $rulesApplicationClass($this->createServicesContainer($configuration, $htmlHelper));
+        return new $rulesApplicationClass($servicesContainer ?? $this->getServicesContainer());
     }
 
     protected function getServicesContainer(): ServicesContainer
@@ -443,6 +435,37 @@ abstract class AbstractContentTest extends TestWithMockery
             $configuration ?? $this->getConfiguration(),
             $htmlHelper ?? $this->createHtmlHelper($this->getDirs())
         );
+    }
+
+    protected function getGit(): Git
+    {
+        if ($this->git === null) {
+            $this->git = $this->createGit();
+        }
+        return $this->git;
+    }
+
+    protected function createGit(): Git
+    {
+        return new Git();
+    }
+
+    protected function getBot(): Bot
+    {
+        if ($this->bot === null) {
+            $botClass = $this->getBotClass();
+            $this->bot = new $botClass();
+        }
+        return $this->bot;
+    }
+
+    protected function getEnvironment(): Environment
+    {
+        if ($this->environment === null) {
+            $environmentClass = $this->getEnvironmentClass();
+            $this->environment = $environmentClass::createFromGlobals();
+        }
+        return $this->environment;
     }
 
     /**
@@ -463,17 +486,43 @@ abstract class AbstractContentTest extends TestWithMockery
         return new $dirsClass($projectRoot);
     }
 
-    protected function getDirsClass(): string
+    protected function getCookiesService(): CookiesService
     {
-        return Dirs::class;
+        if ($this->cookiesService === null) {
+            $this->cookiesService = $this->createCookiesService($this->getRequest());
+        }
+        return $this->cookiesService;
     }
 
-    protected function getEnvironment(): Environment
+    protected function createCookiesService(Request $request): CookiesService
     {
-        if ($this->environment === null) {
-            $this->environment = Environment::createFromGlobals();
+        $cookiesServiceClass = $this->getCookiesServiceClass();
+        return new $cookiesServiceClass($request);
+    }
+
+    protected function getRequest(): Request
+    {
+        if ($this->request === null) {
+            $this->request = $this->createRequest();
         }
-        return $this->environment;
+        return $this->request;
+    }
+
+    /**
+     * @param array $get
+     * @param string $path
+     * @return Request
+     */
+    protected function createRequest(array $get = [], string $path = '/'): Request
+    {
+        return new Request(
+            $this->getBot(),
+            $this->getEnvironment(),
+            $get,
+            [], // post
+            [], // cookies
+            ['REQUEST_URI' => $path] // server
+        );
     }
 
     /**
@@ -555,8 +604,8 @@ abstract class AbstractContentTest extends TestWithMockery
         if ($nameOfOwnershipConfirmation === null) {
             $usagePolicy = new UsagePolicy(
                 $this->getVariablePartOfNameForPass(),
-                new Request($this->getBot(), $this->getEnvironment()),
-                new CookiesService()
+                Request::createFromGlobals($this->getBot(), $this->getEnvironment()),
+                $this->getCookiesService()
             );
             try {
                 $usagePolicyReflection = new \ReflectionClass(UsagePolicy::class);
@@ -707,7 +756,7 @@ abstract class AbstractContentTest extends TestWithMockery
         static $projectRoot;
         if ($projectRoot === null) {
             self::assertDirectoryExists(\DRD_PLUS_PROJECT_ROOT, 'Project root has not been found');
-            $projectRoot = \DRD_PLUS_PROJECT_ROOT;
+            $projectRoot = DirName::getPathWithResolvedParents(\DRD_PLUS_PROJECT_ROOT);
         }
 
         return $projectRoot;
