@@ -13,12 +13,6 @@
       "DrdPlus\\": "DrdPlus/"
     }
   },
-  "repositories": [
-    {
-      "url": "/home/jaroslav/projects/docker/drdplus/www/rules.skeleton",
-      "type": "vcs"
-    }
-  ],
   "require": {
     "php": ">=7.1",
     "drdplus/rules-skeleton": "^1.6"
