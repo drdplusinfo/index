@@ -18,3 +18,4 @@ expected_web_name: 'DrD+ pravidla a odkazy'
 expected_page_title: '📚 DrD+ pravidla a odkazy'
 expected_google_analytics_id: 'UA-121206931-1'
 has_external_anchors_with_hashes: false
+has_tables_related_content: false
