@@ -979,17 +979,17 @@
     },
     {
         "name": "justinrainbow/json-schema",
-        "version": "5.2.9",
-        "version_normalized": "5.2.9.0",
+        "version": "5.2.10",
+        "version_normalized": "5.2.10.0",
         "source": {
             "type": "git",
             "url": "https://github.com/justinrainbow/json-schema.git",
-            "reference": "44c6787311242a979fa15c704327c20e7221a0e4"
+            "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/44c6787311242a979fa15c704327c20e7221a0e4",
-            "reference": "44c6787311242a979fa15c704327c20e7221a0e4",
+            "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+            "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
             "shasum": ""
         },
         "require": {
@@ -1000,7 +1000,7 @@
             "json-schema/json-schema-test-suite": "1.2.0",
             "phpunit/phpunit": "^4.8.35"
         },
-        "time": "2019-09-25T14:49:45+00:00",
+        "time": "2020-05-27T16:41:55+00:00",
         "bin": [
             "bin/validate-json"
         ],
@@ -1606,17 +1606,17 @@
     },
     {
         "name": "phpmailer/phpmailer",
-        "version": "v6.1.5",
-        "version_normalized": "6.1.5.0",
+        "version": "v6.1.6",
+        "version_normalized": "6.1.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/PHPMailer/PHPMailer.git",
-            "reference": "a8bf068f64a580302026e484ee29511f661b2ad3"
+            "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a8bf068f64a580302026e484ee29511f661b2ad3",
-            "reference": "a8bf068f64a580302026e484ee29511f661b2ad3",
+            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
+            "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
             "shasum": ""
         },
         "require": {
@@ -1637,7 +1637,7 @@
             "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
             "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
         },
-        "time": "2020-03-14T14:23:48+00:00",
+        "time": "2020-05-27T12:24:03+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -2296,12 +2296,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Roave/SecurityAdvisories.git",
-            "reference": "e38de1df609b39d97144514d28b0804ad4daaddb"
+            "reference": "55922f51129488c246a776ff944463605d447da0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/e38de1df609b39d97144514d28b0804ad4daaddb",
-            "reference": "e38de1df609b39d97144514d28b0804ad4daaddb",
+            "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/55922f51129488c246a776ff944463605d447da0",
+            "reference": "55922f51129488c246a776ff944463605d447da0",
             "shasum": ""
         },
         "conflict": {
@@ -2405,7 +2405,7 @@
             "paypal/merchant-sdk-php": "<3.12",
             "pear/archive_tar": "<1.4.4",
             "phpfastcache/phpfastcache": ">=5,<5.0.13",
-            "phpmailer/phpmailer": ">=5,<5.2.27|>=6,<6.0.6",
+            "phpmailer/phpmailer": "<6.1.6",
             "phpmyadmin/phpmyadmin": "<4.9.2",
             "phpoffice/phpexcel": "<1.8.2",
             "phpoffice/phpspreadsheet": "<1.8",
@@ -2540,7 +2540,7 @@
             "zfcampus/zf-apigility-doctrine": ">=1,<1.0.3",
             "zfr/zfr-oauth2-server-module": "<0.1.2"
         },
-        "time": "2020-05-22T06:49:22+00:00",
+        "time": "2020-05-28T00:01:39+00:00",
         "type": "metapackage",
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -4097,31 +4097,31 @@
     },
     {
         "name": "symfony/service-contracts",
-        "version": "v2.0.1",
-        "version_normalized": "2.0.1.0",
+        "version": "v2.1.2",
+        "version_normalized": "2.1.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/service-contracts.git",
-            "reference": "144c5e51266b281231e947b51223ba14acf1a749"
+            "reference": "66a8f0957a3ca54e4f724e49028ab19d75a8918b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/144c5e51266b281231e947b51223ba14acf1a749",
-            "reference": "144c5e51266b281231e947b51223ba14acf1a749",
+            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/66a8f0957a3ca54e4f724e49028ab19d75a8918b",
+            "reference": "66a8f0957a3ca54e4f724e49028ab19d75a8918b",
             "shasum": ""
         },
         "require": {
-            "php": "^7.2.5",
+            "php": ">=7.2.5",
             "psr/container": "^1.0"
         },
         "suggest": {
             "symfony/service-implementation": ""
         },
-        "time": "2019-11-18T17:27:11+00:00",
+        "time": "2020-05-20T17:43:50+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.0-dev"
+                "dev-master": "2.1-dev"
             }
         },
         "installation-source": "dist",
