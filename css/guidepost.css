@@ -75,17 +75,23 @@
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
+    padding: 0 0.5em;
 }
 
-.guidepost .date {
+.guidepost .description {
     font-style: italic;
     font-weight: bold;
     color: #004a00;
 }
 
-.guidepost a:hover .date {
+.guidepost a:hover .description {
     font-weight: normal;
     color: whitesmoke;
+}
+
+.guidepost .description .title {
+    font-size: 80%;
+    font-weight: 400;
 }
 
 .guidepost .lock {
