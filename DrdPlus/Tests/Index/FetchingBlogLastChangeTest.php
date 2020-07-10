@@ -22,10 +22,16 @@ class FetchingBlogLastChangeTest extends AbstractContentTest
         $content = $this->fetchContentFromUrl($urlToUpdateLastChange, self::WITH_BODY);
         self::assertSame('', $content['error'], 'Something goes wrong when fetching ' . $urlToUpdateLastChange);
         self::assertSame(200, $content['responseHttpCode']);
-        $content = json_decode($content['content'], true);
-        $lastArticleDateString = $content['last_article_date'];
+        $jsonContent = json_decode($content['content'], true);
+        self::assertIsArray($jsonContent['data']);
+        $data = $jsonContent['data'];
+        $lastArticleDateString = $data['last_article_date'];
         self::assertRegExp('~20\d{2}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+]\d{2}:\d{2}~', $lastArticleDateString);
         $lastArticleDate = \DateTime::createFromFormat(DATE_ATOM, $lastArticleDateString);
         self::assertLessThan(new \DateTime(), $lastArticleDate);
+        $lastArticleTitle = $data['last_article_title'];
+        self::assertNotEmpty($lastArticleTitle);
+        $lastArticleUrl = $data['last_article_url'];
+        self::assertSame($lastArticleUrl, filter_var($lastArticleUrl, FILTER_VALIDATE_URL));
     }
 }
