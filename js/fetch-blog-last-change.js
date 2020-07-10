@@ -8,6 +8,12 @@ window.addEventListener('DOMContentLoaded', () => {
         const lastArticleTitle = lastArticleInfo['last_article_title'];
         const blogTitle = document.getElementById('blog').getElementsByClassName('title')[0];
         blogTitle.textContent = lastArticleTitle;
+
+        const lastArticleUrl = lastArticleInfo['last_article_url'];
+        if (lastArticleUrl) {
+            const blogLastArticleAnchor = document.getElementById('blog').getElementsByTagName('a')[0];
+            blogLastArticleAnchor.href = lastArticleUrl;
+        }
     });
 });
 
