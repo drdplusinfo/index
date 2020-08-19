@@ -13,6 +13,10 @@ window.addEventListener('DOMContentLoaded', () => {
         if (lastArticleUrl) {
             const blogLastArticleAnchor = document.getElementById('blog').getElementsByTagName('a')[0];
             blogLastArticleAnchor.href = lastArticleUrl;
+            const lastArticleImage = lastArticleInfo['last_article_image'];
+            if (lastArticleImage) {
+                blogLastArticleAnchor.style.backgroundImage = `url(${lastArticleImage})`;
+            }
         }
     });
 });
