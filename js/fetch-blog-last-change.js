@@ -16,6 +16,9 @@ window.addEventListener('DOMContentLoaded', () => {
             const lastArticleImage = lastArticleInfo['last_article_image'];
             if (lastArticleImage) {
                 blogLastArticleAnchor.style.backgroundImage = `url(${lastArticleImage})`;
+                blogLastArticleAnchor.style.filter = 'grayscale(100%)';
+                blogLastArticleAnchor.onmouseenter = () => { blogLastArticleAnchor.style.filter = 'none'; };
+                blogLastArticleAnchor.onmouseleave = () => { blogLastArticleAnchor.style.filter = 'grayscale(100%)'; };
             }
         }
     });
