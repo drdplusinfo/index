@@ -22,9 +22,11 @@ const moveBackgroundImageToLowerLayer = (element) => {
 const sentBackgroundImageToShadows = (element) => {
     const backgroundImageElement = element.getElementsByClassName('item-background-image')[0]
     backgroundImageElement.style.opacity = '40%'
-    backgroundImageElement.style.filter = 'grayscale(100%)'
+    backgroundImageElement.style.filter = 'grayscale(100)'
     backgroundImageElement.style.zIndex = '-1'
     element.style.backgroundImage = 'none'
+    element.style.filter = 'none'
+    element.style.opacity = '100%'
 }
 
 const bringOutBackgroundImageFromShadows = (element) => {
@@ -33,31 +35,20 @@ const bringOutBackgroundImageFromShadows = (element) => {
     element.style.backgroundImage = backgroundImageElement.style.backgroundImage
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+$(() => {
     const elementsWithGrayBackgroundImage = document.getElementsByClassName('item-with-background-image')
     for (let length = elementsWithGrayBackgroundImage.length, index = 0; index < length; index++) {
         try {
             const item = elementsWithGrayBackgroundImage.item(index)
             moveBackgroundImageToLowerLayer(item)
             sentBackgroundImageToShadows(item)
+            $(item).hover(() => bringOutBackgroundImageFromShadows(item), () => sentBackgroundImageToShadows(item))
+            $(item).on('touchstart', () => bringOutBackgroundImageFromShadows(item))
+            $(item).on('touchend', () => sentBackgroundImageToShadows(item))
         } catch (error) {
             console.warn(error)
         }
     }
     const event = new Event('ItemsHaveBackgroundImagesInShadows')
     window.dispatchEvent(event)
-})
-
-jQuery(document).ready(() => {
-    const elementsWithGrayBackgroundImage = document.getElementsByClassName('item-with-background-image')
-    for (let length = elementsWithGrayBackgroundImage.length, index = 0; index < length; index++) {
-        try {
-            const item = elementsWithGrayBackgroundImage.item(index)
-            jQuery(item).hover(() => bringOutBackgroundImageFromShadows(item), () => sentBackgroundImageToShadows(item))
-            jQuery(item).on('touchstart', () => bringOutBackgroundImageFromShadows(item))
-            jQuery(item).on('touchend', () => sentBackgroundImageToShadows(item))
-        } catch (error) {
-            console.warn(error)
-        }
-    }
 })
