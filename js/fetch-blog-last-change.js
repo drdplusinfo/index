@@ -15,29 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
             blogLastArticleAnchor.href = lastArticleUrl
             const lastArticleImage = lastArticleInfo['last_article_image']
             if (lastArticleImage) {
-                const blogBackgroundContainer = document.createElement('div')
-                blogBackgroundContainer.style.position = 'absolute'
-                blogBackgroundContainer.style.zIndex = '-1'
+                const blogBackgroundContainer = blogLastArticleAnchor.getElementsByClassName('item-background-image')[0]
                 blogBackgroundContainer.style.width = '100%'
                 blogBackgroundContainer.style.height = '100%'
                 blogBackgroundContainer.style.backgroundImage = `url(${lastArticleImage})`
-
-                const blogLastArticleAnchorOnmouseleave = () => {
-                    blogBackgroundContainer.style.filter = 'grayscale(100%)'
-                    blogBackgroundContainer.style.opacity = '60%'
-                }
-
-                blogLastArticleAnchor.style.position = 'relative'
-                blogLastArticleAnchor.style.backgroundImage = 'none'
-
-                blogLastArticleAnchor.onmouseenter = () => {
-                    blogBackgroundContainer.style.filter = 'none'
-                    blogBackgroundContainer.style.opacity = '100%'
-                }
-                blogLastArticleAnchor.onmouseleave = blogLastArticleAnchorOnmouseleave;
-                blogLastArticleAnchorOnmouseleave();
-
-                blogLastArticleAnchor.prepend(blogBackgroundContainer)
             }
         }
     })
