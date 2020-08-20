@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+window.addEventListener('ItemsHaveBackgroundImagesInShadows', () => {
     getLastArticleInfo().then(lastArticleInfo => {
         const lastArticleDate = lastArticleInfo['last_article_date']
         const blogLastChange = document.getElementById('blog').getElementsByClassName('date')[0]

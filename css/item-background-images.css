@@ -6,4 +6,8 @@
 
 .item-with-background-image {
     position: relative;
+    filter: grayscale(100);
+    -webkit-filter: grayscale(100);
+    opacity: 40%;
+    -moz-opacity: 40%;
 }
