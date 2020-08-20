@@ -47,6 +47,4 @@ window.addEventListener('DOMContentLoaded', () => {
             console.warn(error)
         }
     }
-    const event = new Event('ItemsHaveBackgroundImagesInShadows')
-    window.dispatchEvent(event)
 })
