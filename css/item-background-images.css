@@ -1,0 +1,9 @@
+.item-background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.item-with-background-image {
+    position: relative;
+}
