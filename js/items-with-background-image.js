@@ -33,7 +33,7 @@ const bringOutBackgroundImageFromShadows = (element) => {
     element.style.backgroundImage = backgroundImageElement.style.backgroundImage
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+$(() => {
     const elementsWithGrayBackgroundImage = document.getElementsByClassName('item-with-background-image')
     for (let length = elementsWithGrayBackgroundImage.length, index = 0; index < length; index++) {
         try {
@@ -47,4 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
             console.warn(error)
         }
     }
+    const event = new Event('ItemsHaveBackgroundImagesInShadows')
+    window.dispatchEvent(event)
 })
