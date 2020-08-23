@@ -51,32 +51,14 @@
     vertical-align: middle; /* for anchor */
 }
 
-.guidepost .links .link {
-    height: initial;
-    line-height: initial;
-    margin: auto;
-    display: block;
-    font-size: 90%;
-}
-
-@media (max-width: 991px) {
-    .guidepost .links .link {
-        line-height: 0.95;
-    }
-}
-
-@media (max-width: 767px) {
-    .guidepost .links .link {
-        line-height: 1.2;
-    }
-}
-
 .guidepost .name {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
     padding: 0 0.5em;
     font-size: 22px;
+    position: relative;
+    z-index: 1;
 }
 
 .guidepost .name .note {
@@ -111,24 +93,10 @@
     opacity: .8;
 }
 
-.guidepost .handbook {
-    background-size: cover;
-}
-
 .guidepost .forum {
     font-style: italic;
 }
 
 .guidepost .character-sheet {
     font-style: italic;
-}
-
-.guidepost .small-image {
-    background-position: center;
-    background-size: contain;
-}
-
-.guidepost .filling-image {
-    background-position: center;
-    background-size: contain;
 }
