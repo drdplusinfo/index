@@ -1,4 +1,4 @@
-window.addEventListener('ItemsHaveBackgroundImagesInShadows', () => {
+$(() => {
     getLastArticleInfo().then(lastArticleInfo => {
         const lastArticleDate = lastArticleInfo['last_article_date']
         const blogLastChange = document.getElementById('blog').getElementsByClassName('date')[0]
@@ -16,8 +16,6 @@ window.addEventListener('ItemsHaveBackgroundImagesInShadows', () => {
             const lastArticleImage = lastArticleInfo['last_article_image']
             if (lastArticleImage) {
                 const blogBackgroundContainer = blogLastArticleAnchor.getElementsByClassName('item-background-image')[0]
-                blogBackgroundContainer.style.width = '100%'
-                blogBackgroundContainer.style.height = '100%'
                 blogBackgroundContainer.style.backgroundImage = `url(${lastArticleImage})`
             }
         }

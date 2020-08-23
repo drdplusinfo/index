@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "drdplus/rules-skeleton",
-            "version": "1.7.27",
+            "version": "1.7.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/rules-skeleton.git",
-                "reference": "58cb819a8483a1db3859009e73b492845fc5c1af"
+                "reference": "2ac0848f01e49528eff66d2692ef4ce666e3c5f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/58cb819a8483a1db3859009e73b492845fc5c1af",
-                "reference": "58cb819a8483a1db3859009e73b492845fc5c1af",
+                "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/2ac0848f01e49528eff66d2692ef4ce666e3c5f8",
+                "reference": "2ac0848f01e49528eff66d2692ef4ce666e3c5f8",
                 "shasum": ""
             },
             "require": {
@@ -73,20 +73,20 @@
                 "helper",
                 "rules"
             ],
-            "time": "2020-08-18T11:49:08+00:00"
+            "time": "2020-08-22T16:23:51+00:00"
         },
         {
             "name": "drdplus/web-versions",
-            "version": "1.0.3",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/web-versions.git",
-                "reference": "84f3a6243e02cfa71818c9eaa6b4adfb4d5f32fa"
+                "reference": "80ad8ce0a4e6bf22e7dbcbb8e6afc15d927f1820"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/web-versions/zipball/84f3a6243e02cfa71818c9eaa6b4adfb4d5f32fa",
-                "reference": "84f3a6243e02cfa71818c9eaa6b4adfb4d5f32fa",
+                "url": "https://api.github.com/repos/drdplusinfo/web-versions/zipball/80ad8ce0a4e6bf22e7dbcbb8e6afc15d927f1820",
+                "reference": "80ad8ce0a4e6bf22e7dbcbb8e6afc15d927f1820",
                 "shasum": ""
             },
             "require": {
@@ -105,7 +105,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Reads available minor and patch versions of a web files repository",
-            "time": "2019-01-17T14:12:38+00:00"
+            "time": "2020-08-21T08:37:14+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -196,16 +196,16 @@
         },
         {
             "name": "granam/git",
-            "version": "1.2.8",
+            "version": "1.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/granam/git.git",
-                "reference": "a0d9bd5b1a5dcd3d2eb31c932fad03d25b522223"
+                "reference": "d4d16e6ca5c3ab2bcd2ea0537f28c52f1550ca63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/granam/git/zipball/a0d9bd5b1a5dcd3d2eb31c932fad03d25b522223",
-                "reference": "a0d9bd5b1a5dcd3d2eb31c932fad03d25b522223",
+                "url": "https://api.github.com/repos/granam/git/zipball/d4d16e6ca5c3ab2bcd2ea0537f28c52f1550ca63",
+                "reference": "d4d16e6ca5c3ab2bcd2ea0537f28c52f1550ca63",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
                 "tag",
                 "versions"
             ],
-            "time": "2019-12-30T11:50:11+00:00"
+            "time": "2020-08-22T15:28:01+00:00"
         },
         {
             "name": "granam/scalar",

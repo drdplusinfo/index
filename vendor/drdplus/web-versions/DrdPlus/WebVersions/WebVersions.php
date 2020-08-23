@@ -109,7 +109,9 @@ class WebVersions extends StrictObject
     {
         if (($this->lastPatchVersionsOf[$superiorVersion] ?? null) === null) {
             if ($superiorVersion === $this->getLastUnstableVersion()) {
-                $this->lastPatchVersionsOf[$superiorVersion] = $this->getLastUnstableVersion();
+                $this->lastPatchVersionsOf[$superiorVersion] = $superiorVersion;
+            } elseif (strpos($superiorVersion, '(HEAD detached at ') === 0) {
+                $this->lastPatchVersionsOf[$superiorVersion] = $superiorVersion;
             } else {
                 $this->lastPatchVersionsOf[$superiorVersion] = $this->git->getLastPatchVersionOf($superiorVersion, $this->repositoryDir);
             }
