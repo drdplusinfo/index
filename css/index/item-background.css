@@ -4,6 +4,7 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     opacity: 40%;
     filter: grayscale(100);
     z-index: 0;
