@@ -16,6 +16,6 @@ hr {
     border-top: 2px solid rgba(171, 171, 171, 0.55);
 }
 
-.col-md {
+.col-md, .col-sm {
     padding: 4px;
 }
