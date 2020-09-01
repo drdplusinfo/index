@@ -48,6 +48,7 @@
 
 .blog {
     background-image: url(/images/links/blog-color.png?version=6fd02d18a71763194dffce0af3559e72);
+    background-position: initial;
 }
 
 .carodej {
@@ -70,8 +71,6 @@
     background-image: url(/images/links/altar-color.png?version=ec73cf493ed1282156c1ed8751d72c71);
     color: black;
     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .mytago {
@@ -145,8 +144,8 @@
     background-image: url(/images/links/immortal-fighters-color.png?version=f047ffb9769926af7697090c22785e0f);
 }
 
-.majstri-svetov {
-    background-image: url(/images/links/majstri-svetov.png?version=28149140b469ee761ddfaa7e182a031d);
+.scifisk {
+    background-image: url(/images/links/scifisk.png?version=b9bfe6d4dad772fd762a83ce86aedf1b);
 }
 
 .pj-craft {
