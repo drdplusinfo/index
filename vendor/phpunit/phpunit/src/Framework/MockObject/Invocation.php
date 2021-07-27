@@ -11,12 +11,14 @@ namespace PHPUnit\Framework\MockObject;
 
 use function array_map;
 use function explode;
+use function get_class;
 use function implode;
 use function is_object;
 use function sprintf;
 use function strpos;
 use function strtolower;
 use function substr;
+use Doctrine\Instantiator\Instantiator;
 use PHPUnit\Framework\SelfDescribing;
 use PHPUnit\Util\Type;
 use SebastianBergmann\Exporter\Exporter;
@@ -146,10 +148,14 @@ final class Invocation implements SelfDescribing
                 return 0;
 
             case 'bool':
+            case 'false':
                 return false;
 
             case 'array':
                 return [];
+
+            case 'static':
+                return (new Instantiator)->instantiate(get_class($this->object));
 
             case 'object':
                 return new stdClass;
@@ -163,7 +169,7 @@ final class Invocation implements SelfDescribing
             case 'generator':
             case 'iterable':
                 $generator = static function (): \Generator {
-                    yield;
+                    yield from [];
                 };
 
                 return $generator();
@@ -172,9 +178,7 @@ final class Invocation implements SelfDescribing
                 return null;
 
             default:
-                $generator = new Generator;
-
-                return $generator->getMock($this->returnType, [], [], '', false);
+                return (new Generator)->getMock($this->returnType, [], [], '', false);
         }
     }
 

@@ -3,9 +3,11 @@ web:
   protected_access: false
   eshop_url: 'https://obchod.altar.cz/'
   menu_position_fixed: true
-  show_home_button_on_homepage: false
-  show_home_button_on_routes: true
-  home_button_target: '/'
+  menu:
+    home_button:
+      target: '/'
+      show_on_homepage: false
+      show_on_routes: true
   name: 'DrD+ pravidla a odkazy'
   title_smiley: '📚'
   show_debug_contacts: false
