@@ -1,5 +1,6 @@
 <?php
-use \DrdPlus\Index\FileTools;
+
+use DrdPlus\Index\FileTools;
 
 ?>
 <div class="container-fluid">
@@ -21,7 +22,7 @@ use \DrdPlus\Index\FileTools;
         <a href="https://obchod.altar.cz/draci-doupe-a-jine-rpg-hry-asterion-c-1_11.html">Altar</a>, další vydaly
         <a href="https://www.straky.cz/katalog.aspx?Action=Author&AuthID=33&AuthorName=Zbyn%c4%9bk+Ku%c4%8dera+Holub">Straky
           na vrbě</a> a nejnovější vydává <a href="http://www.mytago.cz/books/">Mytago</a> a prodává
-        <a href="https://www.fantasyobchod.cz/draci-doupe-asterion-c-8_97_99_586_104.html">Fantasy obchod</a>.
+        <a href="https://www.imago.cz/draci-doupe-asterion-c-8_97_99_586_104.html">Imago</a>.
       </p>
 
       <p>Ke světu Asterionu někteří přilnuli i spisovatelsky. Nejobsáhlejší autor bude zřejmě Hanina Veselá a její

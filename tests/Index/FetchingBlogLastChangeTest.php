@@ -11,7 +11,7 @@ class FetchingBlogLastChangeTest extends AbstractContentTest
      */
     public function I_can_fetch_blog_last_change()
     {
-        $jsFile = __DIR__ . '/../../../js/index/fetch-blog-last-change.js';
+        $jsFile = __DIR__ . '/../../js/index/fetch-blog-last-change.js';
         self::assertFileExists($jsFile, 'JS file with logic to fetch last blog change does not exist');
         $jsContent = file_get_contents($jsFile);
         self::assertIsString($jsContent);

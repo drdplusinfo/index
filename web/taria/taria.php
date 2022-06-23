@@ -1,5 +1,6 @@
 <?php
-use \DrdPlus\Index\FileTools;
+
+use DrdPlus\Index\FileTools;
 
 ?>
 <div class="container-fluid">

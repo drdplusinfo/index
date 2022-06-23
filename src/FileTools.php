@@ -84,7 +84,7 @@ class FileTools extends StrictObject
                 return $unit;
             }
         }
-        throw new Exceptions\UnknownRequiredUnit(
+        throw new \DrdPlus\Index\Exceptions\UnknownRequiredUnit(
             sprintf("Required unit '%s' is not known. Available are %s", $requiredUnit, implode(',', self::UNITS))
         );
     }

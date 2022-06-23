@@ -22,3 +22,4 @@ has_tables_related_content: false
 public_to_local_url_part_regexp: '~https://www[.]drdplus[.]info~'
 public_to_local_url_part_replacement: 'http://localhost:9999'
 has_anchors_to_same_document: false
+can_have_tables: false
