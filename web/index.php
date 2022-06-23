@@ -75,7 +75,7 @@
       </a>
     </div>
     <div class="col-md col-sm-6 no-gutters" id="blog">
-      <a class="internal-url item-with-background-image" href="https://blog.drdplus.info/">
+      <a class="internal-url item-with-background-image" href="https://blog.draciodkaz.cz/">
         <div class="item-background-image blog"></div>
         <div class="name">Blog z vývoje Dračího odkazu
           <div class="description">
@@ -140,7 +140,7 @@
       </a>
     </div>
     <div class="col-md col-sm-6 no-gutters" id="invisibleBook">
-      <a class="item-with-background-image" href="https://www.fantasyobchod.cz/neviditelna-kniha">
+      <a class="item-with-background-image" href="https://www.imago.cz/neviditelna-kniha">
         <div class="item-background-image neviditelna-kniha small-image"></div>
         <div class="name">Neviditelná kniha
           <div class="note">kuchařka světa pro hry na hrdiny</div>
@@ -163,42 +163,45 @@
         <div class="item-background-image gamecon small-image"></div>
         <div class="name">Gamecon
             <?php
-            $zacatekGameconuProRok = static function(int $rok): \DateTimeInterface {
-                $zacatekCervence = new \DateTimeImmutable($rok . '-07-01 00:00:00');
-                $poradiPrvnihoDne = $zacatekCervence->format('N');
-                $poradiCtvrtka = 4;
+
+            use DrdPlus\Index\Gamecon\Cas\DateTimeGamecon;
+
+            $zacatekGameconuProRok = static function (int $rok): \DateTimeInterface {
+                $zacatekCervence     = new \DateTimeImmutable($rok . '-07-01 00:00:00');
+                $poradiPrvnihoDne    = $zacatekCervence->format('N');
+                $poradiCtvrtka       = 4;
                 $posunNaDalsiCtvrtek = $poradiPrvnihoDne < $poradiCtvrtka
                     ? $poradiCtvrtka - $poradiPrvnihoDne
                     : $poradiPrvnihoDne - $poradiCtvrtka + 1;
-                $nejblizsiCtvrtek = $zacatekCervence->modify("+ $posunNaDalsiCtvrtek days");
+                $nejblizsiCtvrtek    = $zacatekCervence->modify("+ $posunNaDalsiCtvrtek days");
                 return $nejblizsiCtvrtek->modify('+ 2 weeks')->setTime(7, 0, 0);
             }
             ?>
           <div class="description">
               <?php
-              $thisYear = (int)date('Y');
-              $now = new \DateTimeImmutable();
-              $thisDay = (int)$now->format('z');
-              $letosniZacatekGameconu = $zacatekGameconuProRok($thisYear);
+              $thisYear                  = (int)date('Y');
+              $now                       = new \DateTimeImmutable();
+              $thisDay                   = (int)$now->format('z');
+              $letosniZacatekGameconu    = DateTimeGamecon::spocitejZacatekGameconu($thisYear);
               $dayOfThisYearGameconStart = (int)$letosniZacatekGameconu->format('z');
               if ($letosniZacatekGameconu < $now) {
-                $dayOfThisYearGameconEnd = $dayOfThisYearGameconStart + 3; // plus friday, saturday and sunday
-                if ($dayOfThisYearGameconEnd < $thisDay) {
-                    $nextYear = $thisYear+1;
-                    echo "Těšíme se na $nextYear!";
-                } else {
-                    echo 'Teď jsme tam!';
-                }
+                  $dayOfThisYearGameconEnd = (int)DateTimeGamecon::spocitejKonecGameconu($thisYear)->format('z');
+                  if ($dayOfThisYearGameconEnd < $thisDay) {
+                      $nextYear = $thisYear + 1;
+                      echo "Těšíme se na $nextYear!";
+                  } else {
+                      echo 'Teď jsme tam!';
+                  }
               } else {
                   $daysToGameconStart = $thisDay - $dayOfThisYearGameconStart;
-                  $daysWord = 'dní';
+                  $daysWord           = 'dní';
                   if ($daysToGameconStart === 1) {
                       $daysWord = 'den';
                   } else if ($daysToGameconStart < 5) {
                       $daysWord = 'dny';
                   }
                   echo "Už jen $daysToGameconStart $daysWord!";
-              }?>
+              } ?>
           </div>
           <div class="note">Největší festival nepočítačových her</div>
         </div>
@@ -216,7 +219,8 @@
   </div>
   <div class="row">
     <div class="col-md col-sm-6 no-gutters" id="pjCraft">
-      <a class="item-with-background-image" href="https://www.youtube.com/playlist?list=PLno6me0_P88URHYUpn_Te7n9u5LE33zRg">
+      <a class="item-with-background-image"
+         href="https://www.youtube.com/playlist?list=PLno6me0_P88URHYUpn_Te7n9u5LE33zRg">
         <div class="item-background-image pj-craft"></div>
         <div class="name">PJ craft
           <div class="note">Dobré rady Pánům jeskyně</div>
@@ -337,10 +341,10 @@
         </div>
       </a>
     </div>
-    <div class="col-md col-sm-6 no-gutters" id="fantasyObchod">
-      <a class="item-with-background-image" href="https://www.fantasyobchod.cz/">
-        <div class="item-background-image fantasyobchod small-image"></div>
-        <div class="name">Fantasy obchod
+    <div class="col-md col-sm-6 no-gutters" id="imago">
+      <a class="item-with-background-image" href="https://www.imago.cz/">
+        <div class="item-background-image imago small-image"></div>
+        <div class="name">Imago
           <div class="note">Hry, pomůcky, dárky...</div>
         </div>
       </a>
