@@ -1,0 +1,25 @@
+expected_public_url: 'https://www.drdplus.info'
+has_tables: false
+has_authors: false
+has_protected_access: false
+can_be_bought_on_eshop: false
+has_character_sheet: false
+has_links_to_journals: false
+has_link_to_single_journal: false
+has_debug_contacts: false
+has_custom_body_content: false
+has_table_of_contents: false
+has_headings: false
+has_local_links: false
+has_calculations: false
+has_marked_content: false
+some_expected_table_ids: []
+expected_web_name: 'DrD+ pravidla a odkazy'
+expected_page_title: '📚 DrD+ pravidla a odkazy'
+expected_google_analytics_id: 'UA-121206931-1'
+has_external_anchors_with_hashes: false
+has_tables_related_content: false
+public_to_local_url_part_regexp: '~https://www[.]drdplus[.]info~'
+public_to_local_url_part_replacement: 'http://localhost:9999'
+has_anchors_to_same_document: false
+can_have_tables: false
