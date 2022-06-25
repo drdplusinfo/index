@@ -167,34 +167,35 @@
             use DrdPlus\Index\Gamecon\Cas\DateTimeGamecon;
 
             $zacatekGameconuProRok = static function (int $rok): \DateTimeInterface {
-                $zacatekCervence = new \DateTimeImmutable($rok . '-07-01 00:00:00');
-                $poradiPrvnihoDne = $zacatekCervence->format('N');
-                $poradiCtvrtka = 4;
+                $zacatekCervence     = new \DateTimeImmutable($rok . '-07-01 00:00:00');
+                $poradiPrvnihoDne    = $zacatekCervence->format('N');
+                $poradiCtvrtka       = 4;
                 $posunNaDalsiCtvrtek = $poradiPrvnihoDne < $poradiCtvrtka
                     ? $poradiCtvrtka - $poradiPrvnihoDne
                     : $poradiPrvnihoDne - $poradiCtvrtka + 1;
-                $nejblizsiCtvrtek = $zacatekCervence->modify("+ $posunNaDalsiCtvrtek days");
+                $nejblizsiCtvrtek    = $zacatekCervence->modify("+ $posunNaDalsiCtvrtek days");
                 return $nejblizsiCtvrtek->modify('+ 2 weeks')->setTime(7, 0, 0);
             }
             ?>
           <div class="description">
               <?php
-              $thisYear = (int)date('Y');
-              $now = new \DateTimeImmutable();
-              $thisDay = (int)$now->format('z');
+              $thisYear               = (int)date('Y');
+              $now                    = new \DateTimeImmutable();
+              $dnesek                 = (int)$now->format('z');
+              $zitrek                 = $dnesek + 1;
               $letosniZacatekGameconu = DateTimeGamecon::spocitejZacatekGameconu($thisYear);
-              $dayOfThisYearGameconStart = (int)$letosniZacatekGameconu->format('z');
-              if ($letosniZacatekGameconu <= $now) {
-                  $dayOfThisYearGameconEnd = (int)DateTimeGamecon::spocitejKonecGameconu($thisYear)->format('z');
-                  if ($dayOfThisYearGameconEnd < $thisDay) {
+              $denZacatkuGamecnu      = (int)$letosniZacatekGameconu->format('z') - 1;
+              $denKonceGameconu       = (int)DateTimeGamecon::spocitejKonecGameconu($thisYear)->format('z');
+              if ($denZacatkuGamecnu <= $dnesek) {
+                  if ($denKonceGameconu >= $dnesek) {
+                      echo 'Teď jsme tam!';
+                  } else {
                       $nextYear = $thisYear + 1;
                       echo "Těšíme se na $nextYear!";
-                  } else {
-                      echo 'Teď jsme tam!';
                   }
               } else {
-                  $daysToGameconStart = $dayOfThisYearGameconStart - $thisDay;
-                  $daysWord = 'dní';
+                  $daysToGameconStart = $denZacatkuGamecnu - $dnesek;
+                  $daysWord           = 'dní';
                   if ($daysToGameconStart === 1) {
                       $daysWord = 'den';
                   } elseif ($daysToGameconStart < 5) {
