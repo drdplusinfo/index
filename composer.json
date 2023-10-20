@@ -6,7 +6,11 @@
   "keywords": [
     "Drd plus",
     "rules",
-    "sites"
+    "sites",
+    "czech",
+    "slovak",
+    "RPG",
+    "roleplaying"
   ],
   "autoload": {
     "psr-4": {
