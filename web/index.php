@@ -261,6 +261,17 @@
         <div class="name">Dračí hlídka</div>
       </a>
     </div>
+    <div class="col-md col-sm-6 no-gutters" id="jeskyneADraci">
+      <a class="item-with-background-image" href="https://www.jeskyneadraci.cz/">
+        <div class="item-background-image jeskyne-a-draci"></div>
+        <div class="name">
+          Jeskyně a draci
+          <div class="note">Danǧns end dragonz s českou příchutí</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md col-sm-6 no-gutters" id="imperium">
       <a class="item-with-background-image" href="http://imperium.mytago.cz/">
         <div class="item-background-image pribehy-imperia"></div>
@@ -270,8 +281,6 @@
         </div>
       </a>
     </div>
-  </div>
-  <div class="row">
     <div class="col-md col-sm-6 no-gutters" id="drakkar">
       <a class="item-with-background-image" href="https://drakkar.sk/">
         <div class="item-background-image drakkar small-image"></div>
@@ -285,14 +294,6 @@
         <div class="item-background-image immortal-fighters"></div>
         <div class="name">Immortal fighters
           <div class="note">Online textová hra podle DrD</div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md col-sm-6 no-gutters" id="corner">
-      <a class="item-with-background-image" href="https://koncina.cz/">
-        <div class="item-background-image koncina centered-image"></div>
-        <div class="name">Končina
-          <div class="note">Post-apo</div>
         </div>
       </a>
     </div>
